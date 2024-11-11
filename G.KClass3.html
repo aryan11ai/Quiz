@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,56 +497,56 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the capital of India?", choices: ["Delhi", "Mumbai", "Kolkata", "Chennai"], answer: "Delhi" },
-        { question: "2. Which planet is known as the Red Planet?", choices: ["Earth", "Mars", "Jupiter", "Saturn"], answer: "Mars" },
-        { question: "3. Who is known as the King of the Jungle?", choices: ["Elephant", "Tiger", "Lion", "Giraffe"], answer: "Lion" },
-        { question: "4. How many continents are there in the world?", choices: ["5", "6", "7", "8"], answer: "7" },
-        { question: "5. What is the largest mammal in the world?", choices: ["Elephant", "Blue Whale", "Giraffe", "Shark"], answer: "Blue Whale" },
-        { question: "6. Who wrote the national anthem of India?", choices: ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Mahatma Gandhi", "Subhas Chandra Bose"], answer: "Rabindranath Tagore" },
-        { question: "7. What is the tallest mountain in the world?", choices: ["K2", "Kangchenjunga", "Mount Everest", "Mount Kilimanjaro"], answer: "Mount Everest" },
-        { question: "8. Which is the smallest country in the world?", choices: ["Vatican City", "Monaco", "Nauru", "Malta"], answer: "Vatican City" },
-        { question: "9. What do bees produce?", choices: ["Honey", "Wax", "Silk", "Oil"], answer: "Honey" },
-        { question: "10. What is the main ingredient in bread?", choices: ["Flour", "Rice", "Sugar", "Salt"], answer: "Flour" },
-        { question: "11. Which animal is known for its ability to change colors?", choices: ["Chameleon", "Octopus", "Lizard", "Frog"], answer: "Chameleon" },
-        { question: "12. What is the chemical symbol for water?", choices: ["H2O", "CO2", "O2", "NaCl"], answer: "H2O" },
-        { question: "13. Which festival is known as the festival of lights?", choices: ["Holi", "Eid", "Diwali", "Christmas"], answer: "Diwali" },
-        { question: "14. What is the largest planet in our solar system?", choices: ["Earth", "Mars", "Jupiter", "Saturn"], answer: "Jupiter" },
-        { question: "15. What color are the stars?", choices: ["Red", "Blue", "White", "All of the above"], answer: "All of the above" },
-        { question: "16. What is the currency used in the USA?", choices: ["Dollar", "Pound", "Euro", "Rupee"], answer: "Dollar" },
-        { question: "17. Which instrument is used to measure temperature?", choices: ["Barometer", "Thermometer", "Hygrometer", "Altimeter"], answer: "Thermometer" },
-        { question: "18. Who was the first person to walk on the moon?", choices: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Michael Collins"], answer: "Neil Armstrong" },
-        { question: "19. What is the fastest land animal?", choices: ["Cheetah", "Lion", "Horse", "Elephant"], answer: "Cheetah" },
-        { question: "20. How many colors are there in a rainbow?", choices: ["5", "6", "7", "8"], answer: "7" },
-        { question: "21. What is the main source of energy for the Earth?", choices: ["Water", "Wind", "Sun", "Coal"], answer: "Sun" },
-        { question: "22. What is the name of the fairy tale character who lost her glass slipper?", choices: ["Snow White", "Cinderella", "Sleeping Beauty", "Little Red Riding Hood"], answer: "Cinderella" },
-        { question: "23. Which organ pumps blood in the human body?", choices: ["Lungs", "Liver", "Heart", "Kidneys"], answer: "Heart" },
-        { question: "24. Which country is known as the Land of the Rising Sun?", choices: ["China", "Japan", "India", "Thailand"], answer: "Japan" },
-        { question: "25. What do you call a baby cat?", choices: ["Puppy", "Kitten", "Cub", "Calf"], answer: "Kitten" },
-        { question: "26. What is the main gas that we breathe?", choices: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], answer: "Oxygen" },
-        { question: "27. What is the name of the toy building blocks?", choices: ["LEGO", "Blocks", "Bricks", "Cubes"], answer: "LEGO" },
-        { question: "28. How many legs does a spider have?", choices: ["6", "8", "10", "12"], answer: "8" },
-        { question: "29. What is the name of the famous wizard in Harry Potter?", choices: ["Frodo", "Dumbledore", "Gandalf", "Harry Potter"], answer: "Harry Potter" },
-        { question: "30. What do you call a group of lions?", choices: ["Herd", "Pack", "Pride", "Flock"], answer: "Pride" },
-        { question: "31. What is the main ingredient in chocolate?", choices: ["Sugar", "Cocoa", "Milk", "Flour"], answer: "Cocoa" },
-        { question: "32. What type of animal is a dolphin?", choices: ["Fish", "Mammal", "Reptile", "Amphibian"], answer: "Mammal" },
-        { question: "33. What is the capital of France?", choices: ["Berlin", "Madrid", "Paris", "Rome"], answer: "Paris" },
-        { question: "34. Which gas do plants absorb during photosynthesis?", choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], answer: "Carbon Dioxide" },
-        { question: "35. What is the largest ocean on Earth?", choices: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], answer: "Pacific Ocean" },
-        { question: "36. Which animal is known as the 'Ship of the Desert'?", choices: ["Horse", "Camel", "Elephant", "Donkey"], answer: "Camel" },
-        { question: "37. Who is known for discovering gravity?", choices: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"], answer: "Isaac Newton" },
-        { question: "38. What is the name of the largest desert in the world?", choices: ["Sahara Desert", "Gobi Desert", "Arabian Desert", "Kalahari Desert"], answer: "Sahara Desert" },
-        { question: "39. What do we call the imaginary line that divides the Earth into northern and southern hemispheres?", choices: ["Equator", "Prime Meridian", "Tropic of Cancer", "Tropic of Capricorn"], answer: "Equator" },
-        { question: "40. What is the name of the famous clock tower in London?", choices: ["Big Ben", "Eiffel Tower", "Statue of Liberty", "Colosseum"], answer: "Big Ben" },
-        { question: "41. Which is the main language spoken in Spain?", choices: ["Spanish", "French", "Italian", "Portuguese"], answer: "Spanish" },
-        { question: "42. How many bones are there in the human body?", choices: ["206", "201", "205", "210"], answer: "206" },
-        { question: "43. What is the largest continent?", choices: ["Africa", "Asia", "Europe", "North America"], answer: "Asia" },
-        { question: "44. What do we call a scientist who studies rocks?", choices: ["Geologist", "Biologist", "Astronomer", "Chemist"], answer: "Geologist" },
-        { question: "45. What is the name of the first man-made satellite?", choices: ["Apollo", "Vostok", "Sputnik", "Voyager"], answer: "Sputnik" },
-        { question: "46. What do you call the place where animals are kept for public display?", choices: ["Park", "Zoo", "Farm", "Garden"], answer: "Zoo" },
-        { question: "47. Which planet is known for its rings?", choices: ["Earth", "Mars", "Jupiter", "Saturn"], answer: "Saturn" },
-        { question: "48. What is the name of the famous painting by Leonardo da Vinci?", choices: ["Mona Lisa", "The Starry Night", "The Scream", "The Last Supper"], answer: "Mona Lisa" },
-        { question: "49. What is the currency of the United Kingdom?", choices: ["Dollar", "Pound", "Euro", "Rupee"], answer: "Pound" },
-        { question: "50. What do we call a story that is not true?", choices: ["Fiction", "Non-fiction", "Biography", "History"], answer: "Fiction" }
+        { "question": "1. What is the tallest mountain in the world?", "choices": ["K2", "Mount Everest", "Kanchenjunga", "Mount Fuji"], "answer": "Mount Everest" },
+        { "question": "2. Which animal is known as the 'Ship of the Desert'?", "choices": ["Camel", "Elephant", "Horse", "Donkey"], "answer": "Camel" },
+        { "question": "3. What is the capital city of the United States?", "choices": ["Washington D.C.", "New York", "Los Angeles", "Chicago"], "answer": "Washington D.C." },
+        { "question": "4. How many continents are there?", "choices": ["5", "6", "7", "8"], "answer": "7" },
+        { "question": "5. What is the national animal of India?", "choices": ["Lion", "Tiger", "Elephant", "Peacock"], "answer": "Tiger" },
+        { "question": "6. Who invented the light bulb?", "choices": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Marie Curie"], "answer": "Thomas Edison" },
+        { "question": "7. What is the largest planet in our solar system?", "choices": ["Earth", "Jupiter", "Saturn", "Mars"], "answer": "Jupiter" },
+        { "question": "8. What is the largest ocean on Earth?", "choices": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], "answer": "Pacific Ocean" },
+        { "question": "9. What is the shape of the Earth?", "choices": ["Flat", "Round", "Square", "Triangular"], "answer": "Round" },
+        { "question": "10. What is the capital of India?", "choices": ["Mumbai", "Delhi", "Chennai", "Bangalore"], "answer": "Delhi" },
+        { "question": "11. Which bird is known for its beautiful tail feathers?", "choices": ["Peacock", "Eagle", "Sparrow", "Owl"], "answer": "Peacock" },
+        { "question": "12. How many hours are there in a day?", "choices": ["12", "24", "48", "36"], "answer": "24" },
+        { "question": "13. Which planet is known as the Red Planet?", "choices": ["Venus", "Earth", "Mars", "Saturn"], "answer": "Mars" },
+        { "question": "14. What is the currency of the United Kingdom?", "choices": ["Dollar", "Pound", "Euro", "Rupee"], "answer": "Pound" },
+        { "question": "15. Which instrument is used to measure temperature?", "choices": ["Thermometer", "Barometer", "Telescope", "Odometer"], "answer": "Thermometer" },
+        { "question": "16. How many legs does a spider have?", "choices": ["6", "8", "10", "12"], "answer": "8" },
+        { "question": "17. What is the name of the longest river in the world?", "choices": ["Amazon", "Nile", "Ganga", "Yangtze"], "answer": "Nile" },
+        { "question": "18. Which animal is known for its ability to change colors?", "choices": ["Chameleon", "Parrot", "Lion", "Zebra"], "answer": "Chameleon" },
+        { "question": "19. What is the name of the first manned mission to land on the moon?", "choices": ["Apollo 11", "Apollo 13", "Apollo 9", "Gemini 8"], "answer": "Apollo 11" },
+        { "question": "20. What is the main ingredient in a pizza?", "choices": ["Cheese", "Bread", "Tomato", "All of the above"], "answer": "All of the above" },
+        { "question": "21. Which famous scientist developed the theory of relativity?", "choices": ["Isaac Newton", "Galileo", "Albert Einstein", "Nikola Tesla"], "answer": "Albert Einstein" },
+        { "question": "22. What is the tallest building in the world?", "choices": ["Empire State Building", "Eiffel Tower", "Burj Khalifa", "Petronas Towers"], "answer": "Burj Khalifa" },
+        { "question": "23. What is the name of the ocean that borders the east coast of the United States?", "choices": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Southern Ocean"], "answer": "Atlantic Ocean" },
+        { "question": "24. Which is the longest day of the year?", "choices": ["Winter Solstice", "Summer Solstice", "Autumn Equinox", "Spring Equinox"], "answer": "Summer Solstice" },
+        { "question": "25. What is the largest land animal?", "choices": ["Elephant", "Giraffe", "Hippopotamus", "Rhino"], "answer": "Elephant" },
+        { "question": "26. Which country is known as the 'Land of the Rising Sun'?", "choices": ["China", "Japan", "South Korea", "Thailand"], "answer": "Japan" },
+        { "question": "27. What is the color of the planet Venus?", "choices": ["Red", "Blue", "Yellow", "White"], "answer": "Yellow" },
+        { "question": "28. How many players are there in a football team?", "choices": ["7", "8", "9", "11"], "answer": "11" },
+        { "question": "29. What is the national bird of the United States?", "choices": ["Eagle", "Sparrow", "Peacock", "Owl"], "answer": "Eagle" },
+        { "question": "30. What is the name of the first human to travel into space?", "choices": ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "John Glenn"], "answer": "Yuri Gagarin" },
+        { "question": "31. Which gas do plants need to make food?", "choices": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"], "answer": "Carbon dioxide" },
+        { "question": "32. Which is the fastest animal on Earth?", "choices": ["Cheetah", "Lion", "Elephant", "Horse"], "answer": "Cheetah" },
+        { "question": "33. Who wrote the famous play 'Romeo and Juliet'?", "choices": ["Charles Dickens", "William Shakespeare", "Leo Tolstoy", "Mark Twain"], "answer": "William Shakespeare" },
+        { "question": "34. What is the name of the planet closest to the Sun?", "choices": ["Earth", "Mercury", "Venus", "Mars"], "answer": "Mercury" },
+        { "question": "35. What is the national flower of India?", "choices": ["Rose", "Lotus", "Tulip", "Sunflower"], "answer": "Lotus" },
+        { "question": "36. Which animal is known for its black and white stripes?", "choices": ["Tiger", "Zebra", "Cheetah", "Lion"], "answer": "Zebra" },
+        { "question": "37. Which tree produces acorns?", "choices": ["Oak", "Pine", "Maple", "Birch"], "answer": "Oak" },
+        { "question": "38. Which is the fastest bird?", "choices": ["Eagle", "Hawk", "Peregrine Falcon", "Parrot"], "answer": "Peregrine Falcon" },
+        { "question": "39. What is the largest animal in the ocean?", "choices": ["Shark", "Whale", "Dolphin", "Octopus"], "answer": "Whale" },
+        { "question": "40. What is the color of the Statue of Liberty?", "choices": ["Brown", "Green", "Gray", "Blue"], "answer": "Green" },
+        { "question": "41. Who discovered gravity?", "choices": ["Isaac Newton", "Galileo", "Albert Einstein", "Nikola Tesla"], "answer": "Isaac Newton" },
+        { "question": "42. What is the main ingredient in bread?", "choices": ["Wheat", "Rice", "Corn", "Barley"], "answer": "Wheat" },
+        { "question": "43. How many stripes are there on the United States flag?", "choices": ["13", "10", "15", "20"], "answer": "13" },
+        { "question": "44. Which country is famous for its pyramids?", "choices": ["Egypt", "Greece", "India", "China"], "answer": "Egypt" },
+        { "question": "45. How many sides does a hexagon have?", "choices": ["4", "5", "6", "7"], "answer": "6" },
+        { "question": "46. What is the longest river in India?", "choices": ["Ganga", "Yamuna", "Brahmaputra", "Godavari"], "answer": "Ganga" },
+        { "question": "47. What is the name of the space telescope launched in 1990?", "choices": ["Hubble", "Chandra", "Spitzer", "James Webb"], "answer": "Hubble" },
+        { "question": "48. What is the chemical formula for water?", "choices": ["H2O", "CO2", "O2", "N2"], "answer": "H2O" },
+        { "question": "49. Which instrument is used to measure time?", "choices": ["Barometer", "Thermometer", "Clock", "Ruler"], "answer": "Clock" },
+        { "question": "50. What is the name of the first human to walk on the moon?", "choices": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Michael Collins"], "answer": "Neil Armstrong" }
     ];
     
 

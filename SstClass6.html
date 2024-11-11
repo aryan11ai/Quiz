@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the capital of India?", choices: ["New Delhi", "Mumbai", "Kolkata", "Chennai"], answer: "New Delhi" },
-        { question: "2. Which river is known as the 'Holy River' of India?", choices: ["Ganges", "Yamuna", "Brahmaputra", "Godavari"], answer: "Ganges" },
-        { question: "3. What type of government does India have?", choices: ["Monarchy", "Democracy", "Dictatorship", "Oligarchy"], answer: "Democracy" },
-        { question: "4. Who wrote the Indian National Anthem?", choices: ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Lata Mangeshkar", "A. R. Rahman"], answer: "Rabindranath Tagore" },
-        { question: "5. What is the national animal of India?", choices: ["Elephant", "Lion", "Tiger", "Peacock"], answer: "Tiger" },
-        { question: "6. Which mountain range separates India from its northern neighbors?", choices: ["Himalayas", "Andes", "Rockies", "Alps"], answer: "Himalayas" },
-        { question: "7. Who was the first President of India?", choices: ["Jawaharlal Nehru", "Dr. Rajendra Prasad", "Indira Gandhi", "Sardar Patel"], answer: "Dr. Rajendra Prasad" },
-        { question: "8. What is the currency used in India?", choices: ["Dollar", "Euro", "Rupee", "Pound"], answer: "Rupee" },
-        { question: "9. Which is the largest continent?", choices: ["Africa", "Asia", "Europe", "North America"], answer: "Asia" },
-        { question: "10. What is the main source of water in India?", choices: ["Rivers", "Lakes", "Rain", "All of the above"], answer: "All of the above" },
-        { question: "11. Which festival is known as the 'Festival of Lights'?", choices: ["Holi", "Diwali", "Eid", "Christmas"], answer: "Diwali" },
-        { question: "12. What is the main religion practiced in India?", choices: ["Hinduism", "Islam", "Christianity", "Sikhism"], answer: "Hinduism" },
-        { question: "13. What do we call the Indian Parliament's upper house?", choices: ["Lok Sabha", "Rajya Sabha", "Vidhan Sabha", "Gram Panchayat"], answer: "Rajya Sabha" },
-        { question: "14. Which state is known as the 'Land of Five Rivers'?", choices: ["Haryana", "Punjab", "Gujarat", "Rajasthan"], answer: "Punjab" },
-        { question: "15. What is the national flower of India?", choices: ["Lotus", "Rose", "Sunflower", "Daisy"], answer: "Lotus" },
-        { question: "16. Who was known as the 'Iron Man of India'?", choices: ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Dr. B. R. Ambedkar"], answer: "Sardar Vallabhbhai Patel" },
-        { question: "17. What do we call the assembly of representatives in a democracy?", choices: ["Parliament", "Senate", "Council", "Committee"], answer: "Parliament" },
-        { question: "18. Which country is known as the 'Land of the Rising Sun'?", choices: ["Japan", "China", "India", "Thailand"], answer: "Japan" },
-        { question: "19. What is the longest river in India?", choices: ["Ganges", "Yamuna", "Brahmaputra", "Godavari"], answer: "Ganges" },
-        { question: "20. Which festival celebrates the arrival of spring?", choices: ["Holi", "Diwali", "Pongal", "Eid"], answer: "Holi" },
-        { question: "21. Who discovered the sea route to India?", choices: ["Christopher Columbus", "Vasco da Gama", "Marco Polo", "Ferdinand Magellan"], answer: "Vasco da Gama" },
-        { question: "22. What is the primary language spoken in India?", choices: ["Hindi", "English", "Bengali", "Tamil"], answer: "Hindi" },
-        { question: "23. Which continent is known for the Sahara Desert?", choices: ["Asia", "Australia", "Africa", "North America"], answer: "Africa" },
-        { question: "24. Who is known as the 'Father of the Nation' in India?", choices: ["Mahatma Gandhi", "Dr. B. R. Ambedkar", "Jawaharlal Nehru", "Sardar Patel"], answer: "Mahatma Gandhi" },
-        { question: "25. Which mountain is the highest in the world?", choices: ["K2", "Kangchenjunga", "Mount Everest", "Mount Kilimanjaro"], answer: "Mount Everest" },
-        { question: "26. What do we call the movement of people from one place to another?", choices: ["Migration", "Immigration", "Emigration", "All of the above"], answer: "All of the above" },
-        { question: "27. Who is the author of the Indian Constitution?", choices: ["Mahatma Gandhi", "Dr. B. R. Ambedkar", "Jawaharlal Nehru", "Sardar Patel"], answer: "Dr. B. R. Ambedkar" },
-        { question: "28. Which is the smallest state in India by area?", choices: ["Goa", "Sikkim", "Tripura", "Nagaland"], answer: "Goa" },
-        { question: "29. What is the main function of a government?", choices: ["To collect taxes", "To create laws", "To provide services", "All of the above"], answer: "All of the above" },
-        { question: "30. What is the name of India's national bird?", choices: ["Peacock", "Eagle", "Sparrow", "Parrot"], answer: "Peacock" },
-        { question: "31. Which state is known for its tea plantations?", choices: ["Punjab", "Assam", "Gujarat", "Haryana"], answer: "Assam" },
-        { question: "32. What is the capital of France?", choices: ["Berlin", "Madrid", "Rome", "Paris"], answer: "Paris" },
-        { question: "33. What do we call a map that shows natural features like mountains and rivers?", choices: ["Political map", "Physical map", "Thematic map", "Topographic map"], answer: "Physical map" },
-        { question: "34. Who was the last Mughal Emperor of India?", choices: ["Aurangzeb", "Bahadur Shah II", "Akbar", "Shah Jahan"], answer: "Bahadur Shah II" },
-        { question: "35. What is the currency of the United States?", choices: ["Dollar", "Pound", "Euro", "Yen"], answer: "Dollar" },
-        { question: "36. What is the national anthem of India?", choices: ["Vande Mataram", "Jana Gana Mana", "Saare Jahan Se Achha", "Maa Tujhe Salaam"], answer: "Jana Gana Mana" },
-        { question: "37. Who was the first woman Prime Minister of India?", choices: ["Indira Gandhi", "Sonia Gandhi", "Pratibha Patil", "Sarojini Naidu"], answer: "Indira Gandhi" },
-        { question: "38. Which country is known for its pyramids?", choices: ["India", "Egypt", "Mexico", "China"], answer: "Egypt" },
-        { question: "39. What is the name of the document that outlines the rights and duties of citizens?", choices: ["Constitution", "Declaration", "Charter", "Treaty"], answer: "Constitution" },
-        { question: "40. Which city is known as the 'Silicon Valley of India'?", choices: ["Bangalore", "Hyderabad", "Pune", "Delhi"], answer: "Bangalore" },
-        { question: "41. What is the main function of the judiciary?", choices: ["To create laws", "To interpret laws", "To enforce laws", "To collect taxes"], answer: "To interpret laws" },
-        { question: "42. Which is the largest ocean in the world?", choices: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], answer: "Pacific Ocean" },
-        { question: "43. Who is the current Prime Minister of India?", choices: ["Rahul Gandhi", "Narendra Modi", "Sonia Gandhi", "Amit Shah"], answer: "Narendra Modi" },
-        { question: "44. Which festival is celebrated to mark the end of Ramadan?", choices: ["Eid", "Diwali", "Christmas", "Holi"], answer: "Eid" },
-        { question: "45. What is the main purpose of a map?", choices: ["To show locations", "To provide directions", "To represent geographic information", "All of the above"], answer: "All of the above" },
-        { question: "46. Who is known for the theory of evolution?", choices: ["Albert Einstein", "Charles Darwin", "Isaac Newton", "Galileo Galilei"], answer: "Charles Darwin" },
-        { question: "47. What is the largest democracy in the world?", choices: ["India", "USA", "China", "Brazil"], answer: "India" },
-        { question: "48. Which river is the longest in the world?", choices: ["Amazon", "Nile", "Ganges", "Yangtze"], answer: "Nile" },
-        { question: "49. What do we call the first ten amendments to the United States Constitution?", choices: ["Bill of Rights", "Constitutional Amendments", "Declaration of Independence", "Civil Rights"], answer: "Bill of Rights" },
-        { question: "50. Who was the first person to walk on the moon?", choices: ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"], answer: "Neil Armstrong" }
-    ];
+        {"question": "1. What is the capital city of India?", "choices": ["Delhi", "Mumbai", "Kolkata", "Chennai"], "answer": "Delhi"},
+        {"question": "2. Who is known as the 'Father of the Nation' in India?", "choices": ["Mahatma Gandhi", "Subhas Chandra Bose", "Jawaharlal Nehru", "Sardar Patel"], "answer": "Mahatma Gandhi"},
+        {"question": "3. The Indian national flag has how many colors?", "choices": ["3", "4", "5", "6"], "answer": "3"},
+        {"question": "4. The famous 'Taj Mahal' is located in which city?", "choices": ["Delhi", "Mumbai", "Agra", "Jaipur"], "answer": "Agra"},
+        {"question": "5. Who wrote the national anthem of India?", "choices": ["Rabindranath Tagore", "Mahatma Gandhi", "Jawaharlal Nehru", "Subhas Chandra Bose"], "answer": "Rabindranath Tagore"},
+        {"question": "6. The capital of France is?", "choices": ["Rome", "London", "Berlin", "Paris"], "answer": "Paris"},
+        {"question": "7. The national animal of India is?", "choices": ["Lion", "Elephant", "Tiger", "Peacock"], "answer": "Tiger"},
+        {"question": "8. Who was the first President of India?", "choices": ["Dr. Rajendra Prasad", "Dr. Sarvepalli Radhakrishnan", "Zakir Husain", "Jawaharlal Nehru"], "answer": "Dr. Rajendra Prasad"},
+        {"question": "9. What is the longest river in India?", "choices": ["Yamuna", "Ganges", "Indus", "Brahmaputra"], "answer": "Ganges"},
+        {"question": "10. The first woman Prime Minister of India was?", "choices": ["Sonia Gandhi", "Indira Gandhi", "Sarojini Naidu", "Pratibha Patil"], "answer": "Indira Gandhi"},
+        {"question": "11. The capital of Japan is?", "choices": ["Beijing", "Tokyo", "Seoul", "Singapore"], "answer": "Tokyo"},
+        {"question": "12. Which of these is the national bird of India?", "choices": ["Peacock", "Parrot", "Eagle", "Crow"], "answer": "Peacock"},
+        {"question": "13. The 'Qutub Minar' is located in which city?", "choices": ["Delhi", "Agra", "Jaipur", "Lucknow"], "answer": "Delhi"},
+        {"question": "14. The famous 'Red Fort' is located in which city?", "choices": ["Delhi", "Agra", "Mumbai", "Chennai"], "answer": "Delhi"},
+        {"question": "15. Who was the first man to walk on the moon?", "choices": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"], "answer": "Neil Armstrong"},
+        {"question": "16. Who was the first woman to climb Mount Everest?", "choices": ["Junko Tabei", "Bachendri Pal", "Santosh Yadav", "Anshu Jamsenpa"], "answer": "Bachendri Pal"},
+        {"question": "17. Which country shares the longest border with India?", "choices": ["China", "Bangladesh", "Nepal", "Pakistan"], "answer": "Bangladesh"},
+        {"question": "18. The national flower of India is?", "choices": ["Tulip", "Lotus", "Rose", "Jasmine"], "answer": "Lotus"},
+        {"question": "19. Who was the first man to set foot on the moon?", "choices": ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Michael Collins"], "answer": "Neil Armstrong"},
+        {"question": "20. The 'Gateway of India' is located in which city?", "choices": ["Delhi", "Mumbai", "Chennai", "Kolkata"], "answer": "Mumbai"},
+        {"question": "21. Who is known as the 'Missile Man of India'?", "choices": ["Vikram Sarabhai", "Dr. APJ Abdul Kalam", "Satyendra Nath Bose", "Homi J. Bhabha"], "answer": "Dr. APJ Abdul Kalam"},
+        {"question": "22. Which river is called the 'Sorrow of Bihar'?", "choices": ["Yamuna", "Ganges", "Kosi", "Brahmaputra"], "answer": "Kosi"},
+        {"question": "23. The famous 'Sundarbans' is a part of which ecosystem?", "choices": ["Desert", "Forest", "Mangrove", "Grassland"], "answer": "Mangrove"},
+        {"question": "24. The 'Ajanta Caves' are located in which state?", "choices": ["Maharashtra", "Uttarakhand", "Rajasthan", "Goa"], "answer": "Maharashtra"},
+        {"question": "25. Who is the first woman President of India?", "choices": ["Indira Gandhi", "Sarojini Naidu", "Pratibha Patil", "Sonia Gandhi"], "answer": "Pratibha Patil"},
+        {"question": "26. The famous 'Bodh Gaya' is located in which state?", "choices": ["Bihar", "Uttarakhand", "Tamil Nadu", "Rajasthan"], "answer": "Bihar"},
+        {"question": "27. The largest country in the world by area is?", "choices": ["India", "Russia", "United States", "China"], "answer": "Russia"},
+        {"question": "28. Who was the first woman to win the Nobel Prize?", "choices": ["Marie Curie", "Indira Gandhi", "Mother Teresa", "Sarojini Naidu"], "answer": "Marie Curie"},
+        {"question": "29. Who was the first person to win two Nobel Prizes?", "choices": ["Marie Curie", "Albert Einstein", "Linus Pauling", "Max Planck"], "answer": "Marie Curie"},
+        {"question": "30. The famous 'Bangalore Palace' is located in which state?", "choices": ["Karnataka", "Tamil Nadu", "Madhya Pradesh", "Uttarakhand"], "answer": "Karnataka"},
+        {"question": "31. Who was the founder of the Maurya Empire?", "choices": ["Ashoka", "Chandragupta Maurya", "Bindusara", "Kanishka"], "answer": "Chandragupta Maurya"},
+        {"question": "32. The 'Jantar Mantar' is located in which city?", "choices": ["Jaipur", "Delhi", "Mumbai", "Agra"], "answer": "Jaipur"},
+        {"question": "33. The famous 'Charminar' is located in which city?", "choices": ["Hyderabad", "Bhopal", "Delhi", "Kolkata"], "answer": "Hyderabad"},
+        {"question": "34. The capital of Australia is?", "choices": ["Sydney", "Melbourne", "Canberra", "Adelaide"], "answer": "Canberra"},
+        {"question": "35. The famous 'Sanchi Stupa' is located in which state?", "choices": ["Madhya Pradesh", "Uttarakhand", "Maharashtra", "Goa"], "answer": "Madhya Pradesh"},
+        {"question": "36. Who is known as the 'Father of Modern India'?", "choices": ["Subhas Chandra Bose", "Mahatma Gandhi", "Jawaharlal Nehru", "Raja Ram Mohan Roy"], "answer": "Raja Ram Mohan Roy"},
+        {"question": "37. The famous 'Rath Yatra' is celebrated in which state?", "choices": ["Uttarakhand", "Orissa", "Madhya Pradesh", "Gujarat"], "answer": "Orissa"},
+        {"question": "38. The 'Rashtrapati Bhavan' is located in which city?", "choices": ["Delhi", "Mumbai", "Kolkata", "Chennai"], "answer": "Delhi"},
+        {"question": "39. The national tree of India is?", "choices": ["Mango", "Bamboo", "Bodhi Tree", "Peepal"], "answer": "Bodhi Tree"},
+        {"question": "40. The famous 'Ujjain Kumbh Mela' is held in which state?", "choices": ["Madhya Pradesh", "Uttarakhand", "Haryana", "Rajasthan"], "answer": "Madhya Pradesh"},
+        {"question": "41. Who was the first woman astronaut from India?", "choices": ["Sunita Williams", "Kalpana Chawla", "Rita Lobo", "Sally Ride"], "answer": "Kalpana Chawla"},
+        {"question": "42. The first person to set foot on the moon was?", "choices": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "Sally Ride"], "answer": "Neil Armstrong"},
+        {"question": "43. The 'Salar Jung Museum' is located in which city?", "choices": ["Hyderabad", "Kolkata", "Mumbai", "Delhi"], "answer": "Hyderabad"},
+        {"question": "44. The 'Kailasa Temple' is located in which state?", "choices": ["Uttarakhand", "Maharashtra", "Rajasthan", "Tamil Nadu"], "answer": "Maharashtra"},
+        {"question": "45. The 'Hawa Mahal' is located in which city?", "choices": ["Jaipur", "Agra", "Delhi", "Bhopal"], "answer": "Jaipur"},
+        {"question": "46. The famous 'Victoria Memorial' is located in which city?", "choices": ["Delhi", "Kolkata", "Mumbai", "Chennai"], "answer": "Kolkata"},
+        {"question": "47. Who was the first man to travel into space?", "choices": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"], "answer": "Yuri Gagarin"},
+        {"question": "48. The 'Sundarbans' is located in which state?", "choices": ["West Bengal", "Uttarakhand", "Maharashtra", "Tamil Nadu"], "answer": "West Bengal"},
+        {"question": "49. The largest continent by area is?", "choices": ["Africa", "Asia", "Europe", "Australia"], "answer": "Asia"},
+        {"question": "50. The 'Vande Mataram' song was written by?", "choices": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Mahatma Gandhi", "Subhas Chandra Bose"], "answer": "Bankim Chandra Chatterjee"}
+      ]
+      ;
     
 
     

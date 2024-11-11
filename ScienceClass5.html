@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the process by which plants make their food?", choices: ["Photosynthesis", "Respiration", "Transpiration", "Digestion"], answer: "Photosynthesis" },
-        { question: "2. What do we call the organ that pumps blood in the human body?", choices: ["Liver", "Brain", "Heart", "Lungs"], answer: "Heart" },
-        { question: "3. Which part of the plant is responsible for absorbing water?", choices: ["Stem", "Leaf", "Root", "Flower"], answer: "Root" },
-        { question: "4. What is the main gas that plants need for photosynthesis?", choices: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], answer: "Carbon Dioxide" },
-        { question: "5. Which organ is responsible for breathing?", choices: ["Heart", "Lungs", "Kidneys", "Stomach"], answer: "Lungs" },
-        { question: "6. What do we call animals that can live both in water and on land?", choices: ["Mammals", "Reptiles", "Amphibians", "Birds"], answer: "Amphibians" },
-        { question: "7. What is the powerhouse of the cell?", choices: ["Nucleus", "Mitochondria", "Ribosome", "Cell Membrane"], answer: "Mitochondria" },
-        { question: "8. Which planet is known as the Red Planet?", choices: ["Earth", "Venus", "Mars", "Jupiter"], answer: "Mars" },
-        { question: "9. What is the main source of energy for the Earth?", choices: ["The Moon", "The Sun", "The Stars", "The Earth itself"], answer: "The Sun" },
-        { question: "10. Which of these is a renewable source of energy?", choices: ["Coal", "Natural Gas", "Solar Energy", "Nuclear Energy"], answer: "Solar Energy" },
-        { question: "11. What do we call the change of water from liquid to gas?", choices: ["Condensation", "Evaporation", "Freezing", "Melting"], answer: "Evaporation" },
-        { question: "12. Which gas do humans breathe out?", choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], answer: "Carbon Dioxide" },
-        { question: "13. What is the largest organ in the human body?", choices: ["Heart", "Liver", "Skin", "Brain"], answer: "Skin" },
-        { question: "14. Which of the following is a non-renewable resource?", choices: ["Wind", "Sun", "Coal", "Water"], answer: "Coal" },
-        { question: "15. How many bones are there in an adult human body?", choices: ["206", "205", "207", "210"], answer: "206" },
-        { question: "16. What do we call the force that pulls objects towards the Earth?", choices: ["Friction", "Magnetism", "Gravity", "Inertia"], answer: "Gravity" },
-        { question: "17. Which vitamin is known as the sunshine vitamin?", choices: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin B"], answer: "Vitamin D" },
-        { question: "18. What is the main function of red blood cells?", choices: ["To fight infections", "To carry oxygen", "To digest food", "To remove waste"], answer: "To carry oxygen" },
-        { question: "19. Which of these is a mammal?", choices: ["Shark", "Dolphin", "Penguin", "Eagle"], answer: "Dolphin" },
-        { question: "20. What is a habitat?", choices: ["A type of plant", "A place where an animal lives", "A type of weather", "A kind of food"], answer: "A place where an animal lives" },
-        { question: "21. What is the main function of leaves?", choices: ["To absorb water", "To produce food", "To attract insects", "To support the plant"], answer: "To produce food" },
-        { question: "22. Which part of the plant is usually colorful and attracts insects?", choices: ["Root", "Stem", "Leaf", "Flower"], answer: "Flower" },
-        { question: "23. What type of animal lays eggs?", choices: ["Mammals", "Reptiles", "Amphibians", "All of the above"], answer: "All of the above" },
-        { question: "24. What do you call the water cycle?", choices: ["The way water moves in the ocean", "The process of evaporation and precipitation", "The way plants use water", "The way animals drink water"], answer: "The process of evaporation and precipitation" },
-        { question: "25. Which planet is known for its rings?", choices: ["Earth", "Mars", "Jupiter", "Saturn"], answer: "Saturn" },
-        { question: "26. What type of energy does a moving car have?", choices: ["Potential Energy", "Kinetic Energy", "Thermal Energy", "Chemical Energy"], answer: "Kinetic Energy" },
-        { question: "27. Which of the following is a chemical change?", choices: ["Melting ice", "Burning wood", "Dissolving sugar", "Breaking glass"], answer: "Burning wood" },
-        { question: "28. What do you call a baby frog?", choices: ["Tadpole", "Froglet", "Frogling", "Toad"], answer: "Tadpole" },
-        { question: "29. What is the main cause of day and night?", choices: ["The rotation of the Earth", "The revolution of the Earth", "The tilt of the Earth", "The position of the Sun"], answer: "The rotation of the Earth" },
-        { question: "30. Which gas is essential for human survival?", choices: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon Dioxide"], answer: "Oxygen" },
-        { question: "31. What do you call the change of state from solid to liquid?", choices: ["Melting", "Freezing", "Evaporation", "Condensation"], answer: "Melting" },
-        { question: "32. What is a food chain?", choices: ["A type of food", "A series of organisms each dependent on the next", "A type of habitat", "A food group"], answer: "A series of organisms each dependent on the next" },
-        { question: "33. What type of simple machine is a lever?", choices: ["Pulley", "Inclined Plane", "Wedge", "None of the above"], answer: "None of the above" },
-        { question: "34. What do we call the natural satellite of the Earth?", choices: ["Sun", "Star", "Moon", "Planet"], answer: "Moon" },
-        { question: "35. Which organ in the human body helps in digestion?", choices: ["Heart", "Stomach", "Lungs", "Brain"], answer: "Stomach" },
-        { question: "36. What do we call animals that eat both plants and animals?", choices: ["Herbivores", "Carnivores", "Omnivores", "Detrivores"], answer: "Omnivores" },
-        { question: "37. What part of the plant stores food?", choices: ["Root", "Stem", "Leaf", "Flower"], answer: "Root" },
-        { question: "38. What is the smallest unit of life?", choices: ["Cell", "Tissue", "Organ", "Organism"], answer: "Cell" },
-        { question: "39. What is the function of the brain?", choices: ["To pump blood", "To digest food", "To control body functions", "To provide oxygen"], answer: "To control body functions" },
-        { question: "40. What do we call the layer of gases surrounding the Earth?", choices: ["Hydrosphere", "Lithosphere", "Atmosphere", "Biosphere"], answer: "Atmosphere" },
-        { question: "41. What is a producer in an ecosystem?", choices: ["An animal that eats plants", "A plant that produces food", "A decomposer", "A herbivore"], answer: "A plant that produces food" },
-        { question: "42. Which of the following is NOT a renewable resource?", choices: ["Solar energy", "Wind energy", "Fossil fuels", "Hydropower"], answer: "Fossil fuels" },
-        { question: "43. What is the main function of the roots?", choices: ["To support the plant", "To absorb water and nutrients", "To produce food", "To attract insects"], answer: "To absorb water and nutrients" },
-        { question: "44. What type of animal is a butterfly?", choices: ["Mammal", "Reptile", "Insect", "Amphibian"], answer: "Insect" },
-        { question: "45. What do we call the variety of living organisms in an area?", choices: ["Biodiversity", "Ecosystem", "Population", "Community"], answer: "Biodiversity" },
-        { question: "46. What is the chemical formula for water?", choices: ["CO2", "H2O", "O2", "NaCl"], answer: "H2O" },
-        { question: "47. What do we call the movement of water from the surface to the atmosphere?", choices: ["Condensation", "Evaporation", "Precipitation", "Transpiration"], answer: "Evaporation" },
-        { question: "48. Which organelle is known as the 'control center' of the cell?", choices: ["Ribosome", "Nucleus", "Mitochondria", "Cell Membrane"], answer: "Nucleus" },
-        { question: "49. Which of these is a type of force?", choices: ["Gravity", "Friction", "Magnetism", "All of the above"], answer: "All of the above" },
-        { question: "50. What do we call the study of living organisms?", choices: ["Biology", "Chemistry", "Physics", "Geology"], answer: "Biology" }
-    ];
+        { "question": "1. What is the process by which plants make their own food?", "choices": ["Germination", "Photosynthesis", "Respiration", "Pollination"], "answer": "Photosynthesis" },
+        { "question": "2. What is the main function of the roots of a plant?", "choices": ["To absorb water", "To make food", "To produce flowers", "To produce seeds"], "answer": "To absorb water" },
+        { "question": "3. Which of these animals is cold-blooded?", "choices": ["Tiger", "Elephant", "Fish", "Bird"], "answer": "Fish" },
+        { "question": "4. What do we call the process of changing a solid into a liquid?", "choices": ["Freezing", "Melting", "Evaporation", "Condensation"], "answer": "Melting" },
+        { "question": "5. Which part of the plant helps it to stand upright?", "choices": ["Stem", "Root", "Leaf", "Flower"], "answer": "Stem" },
+        { "question": "6. What is the largest planet in our solar system?", "choices": ["Earth", "Mars", "Jupiter", "Saturn"], "answer": "Jupiter" },
+        { "question": "7. What is the name of the process where water turns from liquid to gas?", "choices": ["Evaporation", "Condensation", "Precipitation", "Boiling"], "answer": "Evaporation" },
+        { "question": "8. Which of the following is an example of an herbivore?", "choices": ["Lion", "Elephant", "Tiger", "Eagle"], "answer": "Elephant" },
+        { "question": "9. What is the gas that humans breathe in to survive?", "choices": ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"], "answer": "Oxygen" },
+        { "question": "10. What do we call the process of converting liquid water into solid ice?", "choices": ["Boiling", "Freezing", "Evaporation", "Condensation"], "answer": "Freezing" },
+        { "question": "11. Which of these is a non-living thing?", "choices": ["Tree", "Dog", "Rock", "Fish"], "answer": "Rock" },
+        { "question": "12. What is the main function of the leaves in a plant?", "choices": ["To absorb water", "To make food", "To anchor the plant", "To produce seeds"], "answer": "To make food" },
+        { "question": "13. What is the process of a seed turning into a plant called?", "choices": ["Pollination", "Germination", "Photosynthesis", "Respiration"], "answer": "Germination" },
+        { "question": "14. What is the process where plants release water vapor into the air?", "choices": ["Transpiration", "Evaporation", "Condensation", "Absorption"], "answer": "Transpiration" },
+        { "question": "15. What is the process of a liquid turning into a solid?", "choices": ["Melting", "Freezing", "Boiling", "Evaporation"], "answer": "Freezing" },
+        { "question": "16. Which planet is known as the 'Red Planet'?", "choices": ["Earth", "Mars", "Jupiter", "Venus"], "answer": "Mars" },
+        { "question": "17. What is the main component of the Earth's atmosphere?", "choices": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], "answer": "Nitrogen" },
+        { "question": "18. Which of these animals is a mammal?", "choices": ["Frog", "Lizard", "Elephant", "Fish"], "answer": "Elephant" },
+        { "question": "19. What is the baby of a cow called?", "choices": ["Puppy", "Calf", "Kitten", "Lamb"], "answer": "Calf" },
+        { "question": "20. Which of the following is the largest organ in the human body?", "choices": ["Heart", "Liver", "Brain", "Skin"], "answer": "Skin" },
+        { "question": "21. What is the process by which plants absorb water from the soil?", "choices": ["Absorption", "Evaporation", "Transpiration", "Germination"], "answer": "Absorption" },
+        { "question": "22. What do we call a group of stars?", "choices": ["Solar system", "Constellation", "Planet", "Galaxy"], "answer": "Constellation" },
+        { "question": "23. What is the chemical symbol for water?", "choices": ["H2O", "CO2", "O2", "N2"], "answer": "H2O" },
+        { "question": "24. What is the function of the heart?", "choices": ["To digest food", "To pump blood", "To produce energy", "To help in breathing"], "answer": "To pump blood" },
+        { "question": "25. What is the solid form of water?", "choices": ["Liquid", "Vapor", "Ice", "Steam"], "answer": "Ice" },
+        { "question": "26. What type of energy do we get from the Sun?", "choices": ["Solar energy", "Wind energy", "Water energy", "Electric energy"], "answer": "Solar energy" },
+        { "question": "27. Which of these animals is a reptile?", "choices": ["Snake", "Dog", "Cat", "Bird"], "answer": "Snake" },
+        { "question": "28. Which part of the human body helps us to think?", "choices": ["Brain", "Heart", "Lungs", "Kidney"], "answer": "Brain" },
+        { "question": "29. Which gas do plants release during photosynthesis?", "choices": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+        { "question": "30. What is the main source of energy for all living things?", "choices": ["Water", "Sunlight", "Soil", "Air"], "answer": "Sunlight" },
+        { "question": "31. What do we call the process of liquid turning into gas?", "choices": ["Condensation", "Freezing", "Evaporation", "Boiling"], "answer": "Evaporation" },
+        { "question": "32. Which of the following is not a mammal?", "choices": ["Dog", "Fish", "Elephant", "Whale"], "answer": "Fish" },
+        { "question": "33. What is the most common gas in the Earth's atmosphere?", "choices": ["Oxygen", "Carbon dioxide", "Nitrogen", "Argon"], "answer": "Nitrogen" },
+        { "question": "34. What is the process of plants making food called?", "choices": ["Photosynthesis", "Respiration", "Germination", "Absorption"], "answer": "Photosynthesis" },
+        { "question": "35. What is the name of the largest ocean on Earth?", "choices": ["Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Pacific Ocean"], "answer": "Pacific Ocean" },
+        { "question": "36. What do we call the process of turning a gas into a liquid?", "choices": ["Condensation", "Evaporation", "Freezing", "Boiling"], "answer": "Condensation" },
+        { "question": "37. Which of these animals is a carnivore?", "choices": ["Cow", "Tiger", "Elephant", "Rabbit"], "answer": "Tiger" },
+        { "question": "38. What is the main function of the lungs?", "choices": ["To pump blood", "To digest food", "To help in breathing", "To make food"], "answer": "To help in breathing" },
+        { "question": "39. What do we call the force that pulls things towards the Earth?", "choices": ["Magnetism", "Gravity", "Friction", "Inertia"], "answer": "Gravity" },
+        { "question": "40. What is the name of the gas that animals breathe out?", "choices": ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"], "answer": "Carbon dioxide" },
+        { "question": "41. What do we call the force that resists the movement of objects?", "choices": ["Friction", "Gravity", "Inertia", "Magnetism"], "answer": "Friction" },
+        { "question": "42. What is the main function of the stem of a plant?", "choices": ["To make food", "To produce flowers", "To absorb water", "To transport nutrients"], "answer": "To transport nutrients" },
+        { "question": "43. What is the process of reproduction in plants?", "choices": ["Germination", "Pollination", "Photosynthesis", "Transpiration"], "answer": "Pollination" },
+        { "question": "44. What is the shape of the Earth?", "choices": ["Flat", "Round", "Square", "Oval"], "answer": "Round" },
+        { "question": "45. What do we call the movement of air from high to low pressure?", "choices": ["Wind", "Storm", "Tornado", "Hurricane"], "answer": "Wind" },
+        { "question": "46. What is the process of making food by plants using sunlight?", "choices": ["Photosynthesis", "Absorption", "Evaporation", "Digestion"], "answer": "Photosynthesis" },
+        { "question": "47. What do we call the Earth's natural satellite?", "choices": ["Mars", "Venus", "Moon", "Sun"], "answer": "Moon" },
+        { "question": "48. What is the process by which plants lose water?", "choices": ["Absorption", "Evaporation", "Transpiration", "Condensation"], "answer": "Transpiration" },
+        { "question": "49. Which of these animals has feathers?", "choices": ["Eagle", "Lion", "Elephant", "Tiger"], "answer": "Eagle" },
+        { "question": "50. What is the primary food source for humans?", "choices": ["Fruits", "Vegetables", "Grains", "Meat"], "answer": "Grains" }
+    ]
+    ;
     
 
     

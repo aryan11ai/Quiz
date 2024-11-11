@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is 2 + 3?", choices: ["4", "5", "6", "7"], answer: "5" },
-        { question: "2. What is 10 - 4?", choices: ["6", "7", "5", "4"], answer: "6" },
-        { question: "3. What is 3 x 2?", choices: ["5", "6", "7", "8"], answer: "6" },
-        { question: "4. What is 8 ÷ 4?", choices: ["2", "3", "4", "1"], answer: "2" },
-        { question: "5. What number comes after 7?", choices: ["6", "8", "9", "10"], answer: "8" },
-        { question: "6. What is the shape of a basketball?", choices: ["Square", "Rectangle", "Triangle", "Circle"], answer: "Circle" },
-        { question: "7. What is 5 + 6?", choices: ["11", "10", "12", "9"], answer: "11" },
-        { question: "8. What is 15 - 9?", choices: ["4", "6", "5", "7"], answer: "6" },
-        { question: "9. How many sides does a triangle have?", choices: ["2", "3", "4", "5"], answer: "3" },
-        { question: "10. What is the value of 10 + 5?", choices: ["15", "10", "20", "5"], answer: "15" },
-        { question: "11. What is 12 - 8?", choices: ["2", "3", "4", "5"], answer: "4" },
-        { question: "12. What is 4 x 3?", choices: ["10", "11", "12", "13"], answer: "12" },
-        { question: "13. What is 16 ÷ 4?", choices: ["4", "5", "6", "7"], answer: "4" },
-        { question: "14. What is the next number after 20?", choices: ["21", "19", "22", "23"], answer: "21" },
-        { question: "15. How many days are there in a week?", choices: ["5", "6", "7", "8"], answer: "7" },
-        { question: "16. What is the value of 5 - 3?", choices: ["2", "3", "4", "1"], answer: "2" },
-        { question: "17. What is 3 + 7?", choices: ["8", "9", "10", "11"], answer: "10" },
-        { question: "18. How many fingers do we have on one hand?", choices: ["3", "4", "5", "6"], answer: "5" },
-        { question: "19. What is the value of 2 x 5?", choices: ["8", "9", "10", "11"], answer: "10" },
-        { question: "20. What is 18 - 6?", choices: ["10", "11", "12", "13"], answer: "12" },
-        { question: "21. How many months are there in a year?", choices: ["10", "11", "12", "13"], answer: "12" },
-        { question: "22. What is the shape of a book?", choices: ["Circle", "Triangle", "Rectangle", "Square"], answer: "Rectangle" },
-        { question: "23. What is 7 + 2?", choices: ["8", "9", "10", "11"], answer: "9" },
-        { question: "24. What is 14 - 7?", choices: ["5", "6", "7", "8"], answer: "7" },
-        { question: "25. How many legs does a spider have?", choices: ["6", "8", "4", "2"], answer: "8" },
-        { question: "26. What is 5 + 5?", choices: ["10", "11", "12", "9"], answer: "10" },
-        { question: "27. What is the value of 9 - 5?", choices: ["3", "4", "5", "6"], answer: "4" },
-        { question: "28. What is 4 + 4?", choices: ["7", "8", "9", "10"], answer: "8" },
-        { question: "29. What is 6 x 1?", choices: ["6", "5", "7", "8"], answer: "6" },
-        { question: "30. How many sides does a square have?", choices: ["3", "4", "5", "6"], answer: "4" },
-        { question: "31. What is 30 ÷ 5?", choices: ["5", "6", "7", "8"], answer: "6" },
-        { question: "32. What is 10 - 7?", choices: ["2", "3", "4", "5"], answer: "3" },
-        { question: "33. What is the total value of 1 + 1 + 1?", choices: ["2", "3", "4", "5"], answer: "3" },
-        { question: "34. What is the next number after 15?", choices: ["14", "15", "16", "17"], answer: "16" },
-        { question: "35. What is 3 x 4?", choices: ["10", "11", "12", "13"], answer: "12" },
-        { question: "36. What is 5 ÷ 1?", choices: ["5", "4", "3", "2"], answer: "5" },
-        { question: "37. What is 1 less than 10?", choices: ["8", "9", "7", "10"], answer: "9" },
-        { question: "38. What is 6 + 3?", choices: ["9", "10", "11", "12"], answer: "9" },
-        { question: "39. How many hours are there in a day?", choices: ["12", "20", "24", "18"], answer: "24" },
-        { question: "40. What is the sum of 2 + 2 + 2?", choices: ["5", "6", "7", "8"], answer: "6" },
-        { question: "41. What is 1 + 8?", choices: ["7", "8", "9", "10"], answer: "9" },
-        { question: "42. What is 20 - 5?", choices: ["15", "14", "16", "17"], answer: "15" },
-        { question: "43. What is 5 x 2?", choices: ["7", "8", "9", "10"], answer: "10" },
-        { question: "44. What is 12 ÷ 3?", choices: ["2", "3", "4", "5"], answer: "4" },
-        { question: "45. How many legs does a human have?", choices: ["2", "4", "6", "8"], answer: "2" },
-        { question: "46. What is the total of 1 + 1 + 1 + 1?", choices: ["3", "4", "5", "6"], answer: "4" },
-        { question: "47. What is 9 - 3?", choices: ["6", "5", "4", "3"], answer: "6" },
-        { question: "48. What is 8 + 2?", choices: ["9", "10", "11", "12"], answer: "10" },
-        { question: "49. What is 10 ÷ 5?", choices: ["2", "3", "4", "5"], answer: "2" },
-        { question: "50. What is the value of 5 - 2?", choices: ["2", "3", "4", "1"], answer: "3" }
-    ];
+        { "question": "1. What is 5 + 3?", "choices": ["7", "8", "9", "6"], "answer": "8" },
+        { "question": "2. What is 6 − 4?", "choices": ["2", "3", "1", "4"], "answer": "2" },
+        { "question": "3. What is 2 + 7?", "choices": ["9", "10", "8", "7"], "answer": "9" },
+        { "question": "4. What is 8 − 5?", "choices": ["3", "2", "4", "5"], "answer": "3" },
+        { "question": "5. What is 4 + 4?", "choices": ["7", "8", "9", "10"], "answer": "8" },
+        { "question": "6. What is 5 + 6?", "choices": ["11", "12", "10", "9"], "answer": "11" },
+        { "question": "7. What is 7 − 3?", "choices": ["4", "5", "6", "7"], "answer": "4" },
+        { "question": "8. What is 9 − 6?", "choices": ["3", "2", "4", "5"], "answer": "3" },
+        { "question": "9. What is 6 + 3?", "choices": ["9", "8", "10", "7"], "answer": "9" },
+        { "question": "10. What is 2 + 3?", "choices": ["6", "5", "4", "3"], "answer": "5" },
+        { "question": "11. What is 3 + 4?", "choices": ["7", "6", "8", "5"], "answer": "7" },
+        { "question": "12. What is 10 − 5?", "choices": ["6", "4", "3", "5"], "answer": "5" },
+        { "question": "13. What is 7 + 2?", "choices": ["8", "9", "10", "7"], "answer": "9" },
+        { "question": "14. What is 3 + 5?", "choices": ["8", "9", "7", "6"], "answer": "8" },
+        { "question": "15. What is 4 − 2?", "choices": ["1", "2", "3", "4"], "answer": "2" },
+        { "question": "16. What is 10 − 3?", "choices": ["7", "6", "8", "5"], "answer": "7" },
+        { "question": "17. What is 8 + 1?", "choices": ["9", "7", "8", "10"], "answer": "9" },
+        { "question": "18. What is 5 − 2?", "choices": ["3", "4", "5", "6"], "answer": "3" },
+        { "question": "19. What is 4 + 6?", "choices": ["11", "10", "9", "8"], "answer": "10" },
+        { "question": "20. What is 9 − 3?", "choices": ["6", "5", "4", "3"], "answer": "6" },
+        { "question": "21. What is 5 + 5?", "choices": ["9", "10", "8", "7"], "answer": "10" },
+        { "question": "22. What is 3 − 1?", "choices": ["2", "1", "3", "4"], "answer": "2" },
+        { "question": "23. What is 2 + 5?", "choices": ["7", "6", "8", "9"], "answer": "7" },
+        { "question": "24. What is 10 − 4?", "choices": ["7", "6", "5", "4"], "answer": "6" },
+        { "question": "25. What is 6 + 6?", "choices": ["12", "10", "11", "9"], "answer": "12" },
+        { "question": "26. What is 4 + 3?", "choices": ["6", "7", "8", "9"], "answer": "7" },
+        { "question": "27. What is 2 + 6?", "choices": ["8", "7", "6", "5"], "answer": "8" },
+        { "question": "28. What is 8 − 3?", "choices": ["6", "5", "4", "3"], "answer": "5" },
+        { "question": "29. What is 5 + 2?", "choices": ["7", "8", "6", "9"], "answer": "7" },
+        { "question": "30. What is 9 − 7?", "choices": ["2", "3", "4", "5"], "answer": "2" },
+        { "question": "31. What is 7 + 1?", "choices": ["8", "6", "7", "9"], "answer": "8" },
+        { "question": "32. What is 10 − 9?", "choices": ["1", "2", "3", "4"], "answer": "1" },
+        { "question": "33. What is 4 + 2?", "choices": ["7", "6", "5", "8"], "answer": "6" },
+        { "question": "34. What is 6 − 2?", "choices": ["4", "5", "3", "6"], "answer": "4" },
+        { "question": "35. What is 3 + 3?", "choices": ["6", "5", "7", "4"], "answer": "6" },
+        { "question": "36. What is 8 − 6?", "choices": ["3", "2", "1", "4"], "answer": "2" },
+        { "question": "37. What is 7 − 4?", "choices": ["3", "2", "4", "1"], "answer": "3" },
+        { "question": "38. What is 5 + 1?", "choices": ["6", "7", "8", "5"], "answer": "6" },
+        { "question": "39. What is 2 + 2?", "choices": ["4", "5", "3", "6"], "answer": "4" },
+        { "question": "40. What is 3 + 4?", "choices": ["8", "7", "9", "6"], "answer": "7" },
+        { "question": "41. What is 9 − 2?", "choices": ["7", "6", "8", "5"], "answer": "7" },
+        { "question": "42. What is 10 − 6?", "choices": ["4", "5", "3", "2"], "answer": "4" },
+        { "question": "43. What is 6 − 3?", "choices": ["3", "5", "6", "2"], "answer": "3" },
+        { "question": "44. What is 5 − 3?", "choices": ["2", "3", "4", "1"], "answer": "2" },
+        { "question": "45. What is 7 + 3?", "choices": ["9", "10", "8", "7"], "answer": "10" },
+        { "question": "46. What is 8 + 4?", "choices": ["12", "10", "11", "9"], "answer": "12" },
+        { "question": "47. What is 5 + 3?", "choices": ["8", "9", "7", "10"], "answer": "8" },
+        { "question": "48. What is 2 + 4?", "choices": ["6", "7", "5", "8"], "answer": "6" },
+        { "question": "49. What is 6 + 1?", "choices": ["7", "8", "9", "6"], "answer": "7" },
+        { "question": "50. What is 7 − 2?", "choices": ["5", "6", "4", "3"], "answer": "5" }
+    ]
+    ;
     
 
     

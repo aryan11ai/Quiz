@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the sum of 250 + 75?", choices: ["325", "350", "300", "275"], answer: "325" },
-        { question: "2. Which of the following is a prime number?", choices: ["12", "15", "17", "20"], answer: "17" },
-        { question: "3. What is 45 divided by 5?", choices: ["9", "8", "7", "10"], answer: "9" },
-        { question: "4. What is the place value of 5 in 5,634?", choices: ["5", "500", "5000", "50"], answer: "5000" },
-        { question: "5. What is the value of 7 × 8?", choices: ["56", "54", "63", "48"], answer: "56" },
-        { question: "6. What is the greatest common divisor of 18 and 24?", choices: ["6", "12", "3", "9"], answer: "6" },
-        { question: "7. How many sides does a pentagon have?", choices: ["4", "5", "6", "7"], answer: "5" },
-        { question: "8. Which number is a factor of 36?", choices: ["5", "6", "7", "9"], answer: "6" },
-        { question: "9. What is the square of 9?", choices: ["18", "81", "27", "45"], answer: "81" },
-        { question: "10. What is the smallest even number?", choices: ["0", "1", "2", "4"], answer: "0" },
-        { question: "11. How many degrees are in a right angle?", choices: ["45", "90", "180", "360"], answer: "90" },
-        { question: "12. What is the product of 12 and 11?", choices: ["120", "132", "144", "110"], answer: "132" },
-        { question: "13. How many faces does a cube have?", choices: ["4", "6", "8", "12"], answer: "6" },
-        { question: "14. What is 25% of 200?", choices: ["25", "50", "75", "100"], answer: "50" },
-        { question: "15. Which number is neither positive nor negative?", choices: ["1", "-1", "0", "10"], answer: "0" },
-        { question: "16. What is the least common multiple (LCM) of 4 and 6?", choices: ["6", "12", "18", "24"], answer: "12" },
-        { question: "17. What is 3/4 of 100?", choices: ["50", "75", "100", "25"], answer: "75" },
-        { question: "18. Which fraction is equivalent to 0.5?", choices: ["1/2", "1/3", "2/3", "3/4"], answer: "1/2" },
-        { question: "19. How many centimeters are in a meter?", choices: ["10", "100", "1000", "10000"], answer: "100" },
-        { question: "20. What is the perimeter of a rectangle with length 8 cm and width 6 cm?", choices: ["28 cm", "26 cm", "24 cm", "30 cm"], answer: "28 cm" },
-        { question: "21. If you add up the angles of a triangle, what is the total?", choices: ["90°", "180°", "270°", "360°"], answer: "180°" },
-        { question: "22. Which is the largest: 0.8, 0.88, 0.9, or 0.85?", choices: ["0.8", "0.88", "0.9", "0.85"], answer: "0.9" },
-        { question: "23. What is 3 cubed?", choices: ["6", "9", "12", "27"], answer: "27" },
-        { question: "24. How many millimeters are there in a centimeter?", choices: ["1", "10", "100", "1000"], answer: "10" },
-        { question: "25. What is the value of π (pi) approximately?", choices: ["2", "3.14", "4", "5"], answer: "3.14" },
-        { question: "26. How many minutes are in an hour?", choices: ["30", "45", "50", "60"], answer: "60" },
-        { question: "27. Which of these is an odd number?", choices: ["18", "22", "31", "42"], answer: "31" },
-        { question: "28. What is the decimal form of 3/5?", choices: ["0.5", "0.6", "0.7", "0.8"], answer: "0.6" },
-        { question: "29. If a=4 and b=5, what is a + b?", choices: ["5", "8", "9", "10"], answer: "9" },
-        { question: "30. Which of the following has only one line of symmetry?", choices: ["Square", "Circle", "Rectangle", "Triangle"], answer: "Rectangle" },
-        { question: "31. What is the value of 7 - (-3)?", choices: ["4", "7", "10", "12"], answer: "10" },
-        { question: "32. What is 20% of 200?", choices: ["20", "40", "50", "80"], answer: "40" },
-        { question: "33. How many milliliters are in a liter?", choices: ["10", "100", "500", "1000"], answer: "1000" },
-        { question: "34. How many zeros are there in one million?", choices: ["5", "6", "7", "8"], answer: "6" },
-        { question: "35. What is 0.75 as a fraction?", choices: ["1/2", "2/3", "3/4", "4/5"], answer: "3/4" },
-        { question: "36. What is the area of a rectangle with length 10 cm and width 4 cm?", choices: ["20 cm²", "30 cm²", "40 cm²", "50 cm²"], answer: "40 cm²" },
-        { question: "37. What do you get if you multiply a number by zero?", choices: ["Zero", "The number itself", "One", "Infinity"], answer: "Zero" },
-        { question: "38. How many grams are in a kilogram?", choices: ["100", "500", "1000", "1500"], answer: "1000" },
-        { question: "39. Which of these fractions is smallest?", choices: ["1/2", "1/3", "1/4", "1/5"], answer: "1/5" },
-        { question: "40. What is the perimeter of a square with side length 6 cm?", choices: ["12 cm", "18 cm", "24 cm", "36 cm"], answer: "24 cm" },
-        { question: "41. If you divide a number by itself, what is the result?", choices: ["1", "0", "The number itself", "Infinity"], answer: "1" },
-        { question: "42. What is the value of 6 × 7?", choices: ["36", "42", "48", "54"], answer: "42" },
-        { question: "43. Which number is greater: -3 or -7?", choices: ["-3", "-7", "They are equal", "None"], answer: "-3" },
-        { question: "44. How many halves make up a whole?", choices: ["1", "2", "3", "4"], answer: "2" },
-        { question: "45. What is the perimeter of a triangle with sides 5 cm, 7 cm, and 10 cm?", choices: ["12 cm", "18 cm", "22 cm", "28 cm"], answer: "22 cm" },
-        { question: "46. What is the reciprocal of 5?", choices: ["1/5", "5", "10", "2"], answer: "1/5" },
-        { question: "47. What is the sum of the first five positive even numbers?", choices: ["20", "25", "30", "40"], answer: "30" },
-        { question: "48. If 4 × n = 20, what is the value of n?", choices: ["4", "5", "10", "15"], answer: "5" },
-        { question: "49. How many edges does a cube have?", choices: ["4", "8", "12", "16"], answer: "12" },
-        { question: "50. Which of the following is a composite number?", choices: ["3", "5", "7", "9"], answer: "9" }
-    ];
+        { "question": "1. What is 64 ÷ 8?", "choices": ["8", "9", "7", "6"], "answer": "8" },
+        { "question": "2. What is the value of 4 × 9?", "choices": ["36", "35", "34", "38"], "answer": "36" },
+        { "question": "3. What is the value of 15 ÷ 3?", "choices": ["4", "5", "6", "7"], "answer": "5" },
+        { "question": "4. What is 14 + 28?", "choices": ["42", "43", "40", "41"], "answer": "42" },
+        { "question": "5. What is the perimeter of a rectangle with length 5 cm and width 3 cm?", "choices": ["16 cm", "14 cm", "15 cm", "18 cm"], "answer": "16 cm" },
+        { "question": "6. What is the area of a square with side length 6 cm?", "choices": ["36 cm²", "30 cm²", "24 cm²", "18 cm²"], "answer": "36 cm²" },
+        { "question": "7. What is 24 ÷ 6?", "choices": ["4", "5", "6", "7"], "answer": "4" },
+        { "question": "8. What is the sum of 72 and 18?", "choices": ["90", "88", "92", "85"], "answer": "90" },
+        { "question": "9. What is the product of 8 and 7?", "choices": ["56", "57", "58", "59"], "answer": "56" },
+        { "question": "10. What is the value of 6 + 3 × 2?", "choices": ["12", "15", "13", "14"], "answer": "12" },
+        { "question": "11. What is 5 × 11?", "choices": ["55", "50", "45", "60"], "answer": "55" },
+        { "question": "12. What is the value of 18 ÷ 3?", "choices": ["6", "5", "7", "8"], "answer": "6" },
+        { "question": "13. What is the LCM of 3 and 5?", "choices": ["15", "10", "12", "20"], "answer": "15" },
+        { "question": "14. What is the value of 9²?", "choices": ["81", "72", "90", "60"], "answer": "81" },
+        { "question": "15. What is 3 × 9?", "choices": ["27", "24", "30", "33"], "answer": "27" },
+        { "question": "16. What is the value of 24 ÷ 4 + 2?", "choices": ["8", "9", "7", "6"], "answer": "8" },
+        { "question": "17. What is the square root of 36?", "choices": ["6", "7", "5", "8"], "answer": "6" },
+        { "question": "18. What is the sum of 15 and 25?", "choices": ["40", "35", "30", "45"], "answer": "40" },
+        { "question": "19. What is 120 ÷ 10?", "choices": ["12", "10", "14", "15"], "answer": "12" },
+        { "question": "20. What is 5 × 6?", "choices": ["30", "32", "28", "26"], "answer": "30" },
+        { "question": "21. What is the value of 7²?", "choices": ["49", "50", "48", "45"], "answer": "49" },
+        { "question": "22. What is 27 ÷ 3?", "choices": ["9", "8", "7", "6"], "answer": "9" },
+        { "question": "23. What is the perimeter of a square with side length 4 cm?", "choices": ["16 cm", "14 cm", "12 cm", "18 cm"], "answer": "16 cm" },
+        { "question": "24. What is the value of 5 + 8 × 2?", "choices": ["21", "20", "18", "17"], "answer": "21" },
+        { "question": "25. What is the area of a rectangle with length 7 cm and width 4 cm?", "choices": ["28 cm²", "30 cm²", "32 cm²", "26 cm²"], "answer": "28 cm²" },
+        { "question": "26. What is the sum of 100 and 15?", "choices": ["115", "110", "105", "120"], "answer": "115" },
+        { "question": "27. What is 13 × 4?", "choices": ["52", "54", "51", "50"], "answer": "52" },
+        { "question": "28. What is 40 ÷ 8?", "choices": ["4", "5", "6", "7"], "answer": "5" },
+        { "question": "29. What is the value of 9 + 5 × 3?", "choices": ["24", "22", "23", "25"], "answer": "24" },
+        { "question": "30. What is the value of 7 × (3 + 4)?", "choices": ["49", "50", "48", "47"], "answer": "49" },
+        { "question": "31. What is 12 × 8?", "choices": ["96", "100", "92", "98"], "answer": "96" },
+        { "question": "32. What is 15 ÷ 5?", "choices": ["3", "2", "4", "5"], "answer": "3" },
+        { "question": "33. What is the perimeter of a triangle with sides 3 cm, 4 cm, and 5 cm?", "choices": ["12 cm", "10 cm", "15 cm", "13 cm"], "answer": "12 cm" },
+        { "question": "34. What is 3/4 + 1/4?", "choices": ["1", "2", "3/2", "5/4"], "answer": "1" },
+        { "question": "35. What is 7 × 3?", "choices": ["21", "22", "20", "19"], "answer": "21" },
+        { "question": "36. What is 20 ÷ 5?", "choices": ["4", "5", "3", "6"], "answer": "4" },
+        { "question": "37. What is the value of 8 × 5?", "choices": ["40", "41", "45", "46"], "answer": "40" },
+        { "question": "38. What is the value of 14 ÷ 7?", "choices": ["2", "3", "4", "5"], "answer": "2" },
+        { "question": "39. What is the sum of 50 and 20?", "choices": ["70", "72", "75", "71"], "answer": "70" },
+        { "question": "40. What is the area of a triangle with base 10 cm and height 6 cm?", "choices": ["30 cm²", "36 cm²", "28 cm²", "32 cm²"], "answer": "30 cm²" },
+        { "question": "41. What is 8 × 6?", "choices": ["48", "46", "44", "40"], "answer": "48" },
+        { "question": "42. What is the value of 9 × (2 + 1)?", "choices": ["27", "28", "29", "30"], "answer": "27" },
+        { "question": "43. What is the value of 10 + 5 × 2?", "choices": ["20", "15", "25", "30"], "answer": "20" },
+        { "question": "44. What is the value of 8 × 4?", "choices": ["32", "34", "36", "30"], "answer": "32" },
+        { "question": "45. What is 36 ÷ 9?", "choices": ["4", "5", "3", "6"], "answer": "4" },
+        { "question": "46. What is 25 + 10?", "choices": ["35", "30", "32", "40"], "answer": "35" },
+        { "question": "47. What is the value of 7 × 2?", "choices": ["14", "12", "15", "16"], "answer": "14" },
+        { "question": "48. What is 50 ÷ 10?", "choices": ["5", "6", "4", "7"], "answer": "5" },
+        { "question": "49. What is the value of 4 × 8?", "choices": ["32", "33", "34", "35"], "answer": "32" },
+        { "question": "50. What is 12 ÷ 3?", "choices": ["4", "3", "5", "6"], "answer": "4" }
+    ]    
+    ;
     
 
     

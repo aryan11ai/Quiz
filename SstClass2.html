@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,258 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is our planet called?", choices: ["Mars", "Earth", "Jupiter", "Venus"], answer: "Earth" },
-        { question: "2. What do we call the place where we live?", choices: ["House", "School", "Park", "Store"], answer: "House" },
-        { question: "3. Which direction does the sun rise from?", choices: ["North", "East", "West", "South"], answer: "East" },
-        { question: "4. Who is our Prime Minister?", choices: ["Narendra Modi", "Rahul Gandhi", "Sonia Gandhi", "Manmohan Singh"], answer: "Narendra Modi" },
-        { question: "5. What is the name of our country?", choices: ["India", "USA", "China", "Japan"], answer: "India" },
-        { question: "6. What is the capital of India?", choices: ["Delhi", "Mumbai", "Kolkata", "Chennai"], answer: "Delhi" },
-        { question: "7. What do we celebrate on 26th January?", choices: ["Independence Day", "Republic Day", "Gandhi Jayanti", "Children's Day"], answer: "Republic Day" },
-        { question: "8. Which is the largest continent?", choices: ["Asia", "Africa", "Europe", "Australia"], answer: "Asia" },
-        { question: "9. What is the name of the festival of lights?", choices: ["Holi", "Eid", "Diwali", "Christmas"], answer: "Diwali" },
-        { question: "10. What is the name of our national bird?", choices: ["Peacock", "Parrot", "Sparrow", "Eagle"], answer: "Peacock" },
-        { question: "11. How many states are there in India?", choices: ["28", "29", "30", "31"], answer: "28" },
-        { question: "12. What do we call the people who live in our country?", choices: ["Citizens", "Tourists", "Visitors", "Strangers"], answer: "Citizens" },
-        { question: "13. What is the main language spoken in India?", choices: ["Hindi", "English", "Tamil", "Bengali"], answer: "Hindi" },
-        { question: "14. Who is the Father of the Nation in India?", choices: ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhas Chandra Bose", "Sardar Patel"], answer: "Mahatma Gandhi" },
-        { question: "15. Which river is known as the 'Ganga'?", choices: ["A river in India", "A mountain", "A city", "A lake"], answer: "A river in India" },
-        { question: "16. What is the name of our national flower?", choices: ["Rose", "Lotus", "Sunflower", "Daisy"], answer: "Lotus" },
-        { question: "17. What do we call the holiday that celebrates the birth of Jesus?", choices: ["Eid", "Diwali", "Christmas", "Holi"], answer: "Christmas" },
-        { question: "18. Which animal is called the 'Ship of the Desert'?", choices: ["Horse", "Camel", "Elephant", "Donkey"], answer: "Camel" },
-        { question: "19. What is the largest ocean in the world?", choices: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], answer: "Pacific Ocean" },
-        { question: "20. What do we celebrate on 15th August?", choices: ["Independence Day", "Republic Day", "Gandhi Jayanti", "Children's Day"], answer: "Independence Day" },
-        { question: "21. What is the name of the country to the north of India?", choices: ["Pakistan", "China", "Nepal", "Bangladesh"], answer: "China" },
-        { question: "22. Who was the first President of India?", choices: ["Rajendra Prasad", "Sardar Patel", "Jawaharlal Nehru", "Gandhi"], answer: "Rajendra Prasad" },
-        { question: "23. What is the currency of India?", choices: ["Dollar", "Yen", "Rupee", "Euro"], answer: "Rupee" },
-        { question: "24. What do we call the place where we learn?", choices: ["Home", "School", "Park", "Market"], answer: "School" },
-        { question: "25. Who is known as the Iron Man of India?", choices: ["Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel", "B.R. Ambedkar"], answer: "Sardar Patel" },
-        { question: "26. Which is the national animal of India?", choices: ["Tiger", "Lion", "Elephant", "Deer"], answer: "Tiger" },
-        { question: "27. What is the main occupation of people in villages?", choices: ["Farming", "Teaching", "Doctor", "Engineer"], answer: "Farming" },
-        { question: "28. What is the name of the festival celebrated with colors?", choices: ["Diwali", "Eid", "Holi", "Christmas"], answer: "Holi" },
-        { question: "29. Which festival do we celebrate with firecrackers?", choices: ["Diwali", "Eid", "Holi", "Christmas"], answer: "Diwali" },
-        { question: "30. What is the main food grain grown in India?", choices: ["Wheat", "Rice", "Corn", "Millet"], answer: "Rice" },
-        { question: "31. What do we call the people who travel to different countries?", choices: ["Tourists", "Citizens", "Locals", "Visitors"], answer: "Tourists" },
-        { question: "32. What is the tallest building in India?", choices: ["Taj Mahal", "Qutub Minar", "Burj Khalifa", "Palace of Winds"], answer: "Qutub Minar" },
-        { question: "33. What is the main source of water?", choices: ["Rain", "Sun", "Soil", "Plants"], answer: "Rain" },
-        { question: "34. What do we call the leader of our country?", choices: ["President", "Prime Minister", "Governor", "Mayor"], answer: "Prime Minister" },
-        { question: "35. Which is the largest state in India by area?", choices: ["Uttar Pradesh", "Madhya Pradesh", "Rajasthan", "Maharashtra"], answer: "Rajasthan" },
-        { question: "36. What is the national anthem of India?", choices: ["Jana Gana Mana", "Vande Mataram", "Saare Jahan Se Achha", "Kadam Kadam Badaye Ja"], answer: "Jana Gana Mana" },
-        { question: "37. How many colors are there in the Indian flag?", choices: ["2", "3", "4", "5"], answer: "3" },
-        { question: "38. What is the name of the Indian national dance?", choices: ["Bharatanatyam", "Kathak", "Kathakali", "All of the above"], answer: "All of the above" },
-        { question: "39. What is the name of the famous fort in Delhi?", choices: ["Agra Fort", "Red Fort", "Golconda Fort", "Jaipur Fort"], answer: "Red Fort" },
-        { question: "40. Who was the first woman Prime Minister of India?", choices: ["Indira Gandhi", "Sonia Gandhi", "Pratibha Patil", "Sarojini Naidu"], answer: "Indira Gandhi" },
-        { question: "41. What is the name of the famous monument in Agra?", choices: ["Hawa Mahal", "Qutub Minar", "Taj Mahal", "Gateway of India"], answer: "Taj Mahal" },
-        { question: "42. Which river is considered holy in India?", choices: ["Ganga", "Yamuna", "Saraswati", "Godavari"], answer: "Ganga" },
-        { question: "43. What is the main occupation of people in cities?", choices: ["Farming", "Service", "Trade", "All of the above"], answer: "Service" },
-        { question: "44. Who is known for his non-violent movement in India?", choices: ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhas Chandra Bose", "B.R. Ambedkar"], answer: "Mahatma Gandhi" },
-        { question: "45. What do we call the area around us?", choices: ["Environment", "Community", "Society", "Culture"], answer: "Environment" },
-        { question: "46. What is the main language spoken in India?", choices: ["Hindi", "English", "Bengali", "All of the above"], answer: "All of the above" },
-        { question: "47. What do we call the money used in a country?", choices: ["Currency", "Credit", "Debit", "Savings"], answer: "Currency" },
-        { question: "48. Which is the smallest continent?", choices: ["Asia", "Africa", "Australia", "Europe"], answer: "Australia" },
-        { question: "49. Who is known as the Nightingale of India?", choices: ["Indira Gandhi", "Sarojini Naidu", "Mahatma Gandhi", "Mother Teresa"], answer: "Sarojini Naidu" },
-        { question: "50. What is the main purpose of a map?", choices: ["To show directions", "To decorate", "To confuse", "To waste time"], answer: "To show directions" }
-    ];
+        {
+          "question": "1. What is the capital of India?",
+          "choices": ["Delhi", "Mumbai", "Kolkata", "Jaipur"],
+          "answer": "Delhi"
+        },
+        {
+          "question": "2. Which of these is a national animal of India?",
+          "choices": ["Lion", "Elephant", "Tiger", "Giraffe"],
+          "answer": "Tiger"
+        },
+        {
+          "question": "3. Who is the first Prime Minister of India?",
+          "choices": ["Jawaharlal Nehru", "Mahatma Gandhi", "Indira Gandhi", "Subhas Chandra Bose"],
+          "answer": "Jawaharlal Nehru"
+        },
+        {
+          "question": "4. Which is the national flower of India?",
+          "choices": ["Rose", "Lotus", "Tulip", "Sunflower"],
+          "answer": "Lotus"
+        },
+        {
+          "question": "5. What is the currency of India?",
+          "choices": ["Dollar", "Euro", "Rupee", "Pound"],
+          "answer": "Rupee"
+        },
+        {
+          "question": "6. How many states are there in India?",
+          "choices": ["28", "29", "30", "31"],
+          "answer": "28"
+        },
+        {
+          "question": "7. Which river is considered holy in India?",
+          "choices": ["Ganga", "Yamuna", "Saraswati", "Godavari"],
+          "answer": "Ganga"
+        },
+        {
+          "question": "8. What is the national bird of India?",
+          "choices": ["Peacock", "Eagle", "Sparrow", "Parrot"],
+          "answer": "Peacock"
+        },
+        {
+          "question": "9. Which of these is a famous monument in India?",
+          "choices": ["Taj Mahal", "Great Wall of China", "Eiffel Tower", "Statue of Liberty"],
+          "answer": "Taj Mahal"
+        },
+        {
+          "question": "10. What is the national tree of India?",
+          "choices": ["Neem", "Bamboo", "Peepal", "Banyan"],
+          "answer": "Banyan"
+        },
+        {
+          "question": "11. What is the national language of India?",
+          "choices": ["Hindi", "English", "Bengali", "Tamil"],
+          "answer": "Hindi"
+        },
+        {
+          "question": "12. Which city is known as the 'Pink City' of India?",
+          "choices": ["Jaipur", "Delhi", "Mumbai", "Chennai"],
+          "answer": "Jaipur"
+        },
+        {
+          "question": "13. Who is known as the Father of the Nation in India?",
+          "choices": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhas Chandra Bose", "Sardar Patel"],
+          "answer": "Mahatma Gandhi"
+        },
+        {
+          "question": "14. Which of these is a famous festival in India?",
+          "choices": ["Diwali", "Christmas", "Halloween", "Easter"],
+          "answer": "Diwali"
+        },
+        {
+          "question": "15. Which is the tallest mountain in India?",
+          "choices": ["Kangchenjunga", "Mount Everest", "Kilimanjaro", "Nanda Devi"],
+          "answer": "Kangchenjunga"
+        },
+        {
+          "question": "16. Which state is known as the 'Land of the Rising Sun'?",
+          "choices": ["Arunachal Pradesh", "Assam", "Nagaland", "Sikkim"],
+          "answer": "Arunachal Pradesh"
+        },
+        {
+          "question": "17. What is the national emblem of India?",
+          "choices": ["Lion", "Tiger", "Peacock", "Elephant"],
+          "answer": "Lion"
+        },
+        {
+          "question": "18. Who is the current President of India?",
+          "choices": ["Ram Nath Kovind", "Droupadi Murmu", "Pranab Mukherjee", "Rajendra Prasad"],
+          "answer": "Droupadi Murmu"
+        },
+        {
+          "question": "19. Which festival is known as the 'Festival of Lights'?",
+          "choices": ["Diwali", "Holi", "Eid", "Christmas"],
+          "answer": "Diwali"
+        },
+        {
+          "question": "20. In which state is the Taj Mahal located?",
+          "choices": ["Uttar Pradesh", "Maharashtra", "Tamil Nadu", "Kerala"],
+          "answer": "Uttar Pradesh"
+        },
+        {
+          "question": "21. Which is the smallest state in India?",
+          "choices": ["Goa", "Sikkim", "Manipur", "Nagaland"],
+          "answer": "Goa"
+        },
+        {
+          "question": "22. Who wrote the Indian National Anthem?",
+          "choices": ["Rabindranath Tagore", "Subhas Chandra Bose", "Mahatma Gandhi", "Jawaharlal Nehru"],
+          "answer": "Rabindranath Tagore"
+        },
+        {
+          "question": "23. Which is the longest river in India?",
+          "choices": ["Ganga", "Yamuna", "Godavari", "Brahmaputra"],
+          "answer": "Ganga"
+        },
+        {
+          "question": "24. What is the national sport of India?",
+          "choices": ["Cricket", "Football", "Hockey", "Kabaddi"],
+          "answer": "Hockey"
+        },
+        {
+          "question": "25. Who is known as the Iron Man of India?",
+          "choices": ["Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel", "Subhas Chandra Bose"],
+          "answer": "Sardar Vallabhbhai Patel"
+        },
+        {
+          "question": "26. What is the currency symbol for the Indian Rupee?",
+          "choices": ["$", "€", "₹", "£"],
+          "answer": "₹"
+        },
+        {
+          "question": "27. Who is the first woman Prime Minister of India?",
+          "choices": ["Indira Gandhi", "Sarojini Naidu", "Sushma Swaraj", "Pratibha Patil"],
+          "answer": "Indira Gandhi"
+        },
+        {
+          "question": "28. What is the official name of India?",
+          "choices": ["Republic of India", "United States of India", "Indian Republic", "Union of India"],
+          "answer": "Republic of India"
+        },
+        {
+          "question": "29. Which is the largest city in India by population?",
+          "choices": ["Delhi", "Mumbai", "Kolkata", "Bangalore"],
+          "answer": "Mumbai"
+        },
+        {
+          "question": "30. Which is the second-largest state in India by area?",
+          "choices": ["Madhya Pradesh", "Uttar Pradesh", "Bihar", "Rajasthan"],
+          "answer": "Madhya Pradesh"
+        },
+        {
+          "question": "31. Which festival marks the beginning of the harvest season in India?",
+          "choices": ["Pongal", "Diwali", "Onam", "Holi"],
+          "answer": "Pongal"
+        },
+        {
+          "question": "32. Which famous fort is located in Rajasthan?",
+          "choices": ["Red Fort", "Qutub Minar", "Amber Fort", "Kumbhalgarh Fort"],
+          "answer": "Amber Fort"
+        },
+        {
+          "question": "33. Which is the oldest active language in India?",
+          "choices": ["Sanskrit", "Hindi", "Tamil", "Bengali"],
+          "answer": "Tamil"
+        },
+        {
+          "question": "34. Who wrote the famous book 'The Discovery of India'?",
+          "choices": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhas Chandra Bose", "Rabindranath Tagore"],
+          "answer": "Jawaharlal Nehru"
+        },
+        {
+          "question": "35. What is the national fruit of India?",
+          "choices": ["Apple", "Mango", "Banana", "Pineapple"],
+          "answer": "Mango"
+        },
+        {
+          "question": "36. Which of these is a famous dance form of India?",
+          "choices": ["Ballet", "Kathak", "Salsa", "Tango"],
+          "answer": "Kathak"
+        },
+        {
+          "question": "37. Which is the largest state in India by area?",
+          "choices": ["Madhya Pradesh", "Rajasthan", "Uttar Pradesh", "Maharashtra"],
+          "answer": "Rajasthan"
+        },
+        {
+          "question": "38. What is the name of India's first satellite?",
+          "choices": ["Aryabhata", "Chandrayaan", "Mangalyaan", "INSAT"],
+          "answer": "Aryabhata"
+        },
+        {
+          "question": "39. Which Indian city is known as the 'City of Joy'?",
+          "choices": ["Kolkata", "Mumbai", "Chennai", "Delhi"],
+          "answer": "Kolkata"
+        },
+        {
+          "question": "40. Who was the first woman President of India?",
+          "choices": ["Pratibha Patil", "Indira Gandhi", "Sarojini Naidu", "Vikram Sarabhai"],
+          "answer": "Pratibha Patil"
+        },
+        {
+          "question": "41. Which of these animals is found in the wild in India?",
+          "choices": ["Penguin", "Panda", "Elephant", "Kangaroo"],
+          "answer": "Elephant"
+        },
+        {
+          "question": "42. What is the name of the famous Indian festival that celebrates colors?",
+          "choices": ["Diwali", "Holi", "Eid", "Christmas"],
+          "answer": "Holi"
+        },
+        {
+          "question": "43. Which is the largest island in India?",
+          "choices": ["Andaman Island", "Lakshadweep Island", "Kochi", "Mumbai"],
+          "answer": "Andaman Island"
+        },
+        {
+          "question": "44. Who was the first Indian to win a Nobel Prize?",
+          "choices": ["Rabindranath Tagore", "C.V. Raman", "Mahatma Gandhi", "Subhas Chandra Bose"],
+          "answer": "Rabindranath Tagore"
+        },
+        {
+          "question": "45. What is the name of the highest civilian award in India?",
+          "choices": ["Bharat Ratna", "Padma Shri", "Padma Bhushan", "Rajiv Gandhi Khel Ratna"],
+          "answer": "Bharat Ratna"
+        },
+        {
+          "question": "46. Which is the most populous city in India?",
+          "choices": ["Delhi", "Kolkata", "Mumbai", "Chennai"],
+          "answer": "Mumbai"
+        },
+        {
+          "question": "47. Which is the official language of the Indian judiciary?",
+          "choices": ["Hindi", "English", "Bengali", "Urdu"],
+          "answer": "English"
+        },
+        {
+          "question": "48. Which state is known as the 'Spice Garden of India'?",
+          "choices": ["Kerala", "Tamil Nadu", "Madhya Pradesh", "Goa"],
+          "answer": "Kerala"
+        },
+        {
+          "question": "49. What is the currency of India?",
+          "choices": ["Dollar", "Yen", "Rupee", "Pound"],
+          "answer": "Rupee"
+        },
+        {
+          "question": "50. Who is the first woman astronaut of India?",
+          "choices": ["Kalpana Chawla", "Sally Ride", "Sunita Williams", "Rita Rani"],
+          "answer": "Kalpana Chawla"
+        }
+      ]
+      ;
     
 
     

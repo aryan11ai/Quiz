@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What do plants need to grow?", choices: ["Sunlight", "Candy", "Toys", "Water"], answer: "Sunlight" },
-        { question: "2. Which part of the plant absorbs water?", choices: ["Stem", "Root", "Leaf", "Flower"], answer: "Root" },
-        { question: "3. What do we call the process of water changing into vapor?", choices: ["Condensation", "Evaporation", "Precipitation", "Transpiration"], answer: "Evaporation" },
-        { question: "4. What is the main source of light during the day?", choices: ["Moon", "Stars", "Sun", "Lamp"], answer: "Sun" },
-        { question: "5. Which animal is known to live both on land and in water?", choices: ["Fish", "Frog", "Dog", "Cat"], answer: "Frog" },
-        { question: "6. What do we breathe in from the air?", choices: ["Carbon Dioxide", "Nitrogen", "Oxygen", "Hydrogen"], answer: "Oxygen" },
-        { question: "7. What is the process of plants making food called?", choices: ["Digestion", "Photosynthesis", "Respiration", "Transpiration"], answer: "Photosynthesis" },
-        { question: "8. Which animal is known for its ability to fly?", choices: ["Elephant", "Lion", "Bird", "Shark"], answer: "Bird" },
-        { question: "9. What do we call water when it freezes?", choices: ["Ice", "Snow", "Steam", "Rain"], answer: "Ice" },
-        { question: "10. What part of our body helps us to see?", choices: ["Ears", "Nose", "Eyes", "Mouth"], answer: "Eyes" },
-        { question: "11. What is the hardest substance found in nature?", choices: ["Gold", "Iron", "Diamond", "Silver"], answer: "Diamond" },
-        { question: "12. Which organ pumps blood in our body?", choices: ["Liver", "Lung", "Heart", "Kidney"], answer: "Heart" },
-        { question: "13. What do we call the process of a caterpillar turning into a butterfly?", choices: ["Molt", "Metamorphosis", "Hibernation", "Migration"], answer: "Metamorphosis" },
-        { question: "14. Which gas do plants absorb?", choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"], answer: "Carbon Dioxide" },
-        { question: "15. What is the color of a healthy plant?", choices: ["Red", "Green", "Blue", "Yellow"], answer: "Green" },
-        { question: "16. What is the main purpose of leaves?", choices: ["To absorb water", "To make food", "To support the plant", "To attract insects"], answer: "To make food" },
-        { question: "17. Which is the largest organ in the human body?", choices: ["Heart", "Liver", "Skin", "Brain"], answer: "Skin" },
-        { question: "18. What do we call animals that eat plants?", choices: ["Carnivores", "Omnivores", "Herbivores", "Insectivores"], answer: "Herbivores" },
-        { question: "19. What is the main function of roots?", choices: ["To hold the plant", "To make food", "To absorb water", "To produce flowers"], answer: "To absorb water" },
-        { question: "20. What is a baby frog called?", choices: ["Tadpole", "Caterpillar", "Chick", "Puppy"], answer: "Tadpole" },
-        { question: "21. What do we call the air we breathe?", choices: ["Oxygen", "Nitrogen", "Air", "Carbon Dioxide"], answer: "Air" },
-        { question: "22. What part of the plant is usually colorful and attracts insects?", choices: ["Stem", "Root", "Leaf", "Flower"], answer: "Flower" },
-        { question: "23. Which type of animal can live in water?", choices: ["Fish", "Dog", "Cat", "Horse"], answer: "Fish" },
-        { question: "24. What helps insects to fly?", choices: ["Wings", "Legs", "Eyes", "Antennas"], answer: "Wings" },
-        { question: "25. What is the largest animal on Earth?", choices: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"], answer: "Blue Whale" },
-        { question: "26. What do we call a group of stars?", choices: ["Planet", "Galaxy", "Constellation", "Asteroid"], answer: "Constellation" },
-        { question: "27. What is the main function of the lungs?", choices: ["To digest food", "To pump blood", "To help us breathe", "To move"], answer: "To help us breathe" },
-        { question: "28. Which is the smallest bird in the world?", choices: ["Eagle", "Hummingbird", "Parrot", "Sparrow"], answer: "Hummingbird" },
-        { question: "29. What do we call the time when animals sleep during the winter?", choices: ["Hibernation", "Migration", "Dormancy", "Resting"], answer: "Hibernation" },
-        { question: "30. What do we call a scientist who studies animals?", choices: ["Botanist", "Zoologist", "Geologist", "Meteorologist"], answer: "Zoologist" },
-        { question: "31. Which animal is known for its ability to change colors?", choices: ["Chameleon", "Tiger", "Elephant", "Giraffe"], answer: "Chameleon" },
-        { question: "32. What do we call a baby chicken?", choices: ["Puppy", "Kitten", "Chick", "Calf"], answer: "Chick" },
-        { question: "33. Which part of the plant is underground?", choices: ["Leaf", "Flower", "Root", "Stem"], answer: "Root" },
-        { question: "34. What do we call the shiny part of a leaf?", choices: ["Blade", "Petiole", "Margin", "Vein"], answer: "Blade" },
-        { question: "35. What type of energy comes from the sun?", choices: ["Nuclear", "Solar", "Wind", "Hydro"], answer: "Solar" },
-        { question: "36. Which organ helps us to taste food?", choices: ["Eyes", "Nose", "Tongue", "Ear"], answer: "Tongue" },
-        { question: "37. What is the main gas in the air?", choices: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon Dioxide"], answer: "Nitrogen" },
-        { question: "38. What do we call the natural home of a plant or animal?", choices: ["Habitat", "Ecosystem", "Environment", "Biome"], answer: "Habitat" },
-        { question: "39. Which animal can live both in water and on land?", choices: ["Fish", "Frog", "Snake", "Rabbit"], answer: "Frog" },
-        { question: "40. What is the term for animals that eat both plants and meat?", choices: ["Carnivores", "Herbivores", "Omnivores", "Insectivores"], answer: "Omnivores" },
-        { question: "41. What do we call a period of time when there is no rain?", choices: ["Drought", "Flood", "Storm", "Hurricane"], answer: "Drought" },
-        { question: "42. Which part of the plant produces seeds?", choices: ["Root", "Leaf", "Stem", "Flower"], answer: "Flower" },
-        { question: "43. What is the function of a flower?", choices: ["To absorb sunlight", "To attract insects", "To make food", "To store water"], answer: "To attract insects" },
-        { question: "44. Which gas is produced by plants during photosynthesis?", choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"], answer: "Oxygen" },
-        { question: "45. What do we call a place where different plants and animals live together?", choices: ["Garden", "Forest", "Habitat", "Ecosystem"], answer: "Ecosystem" },
-        { question: "46. What do we call the change of water into ice?", choices: ["Melting", "Freezing", "Evaporating", "Condensing"], answer: "Freezing" },
-        { question: "47. Which part of the plant is responsible for photosynthesis?", choices: ["Root", "Stem", "Leaf", "Flower"], answer: "Leaf" },
-        { question: "48. What do we call an animal that hunts for food?", choices: ["Predator", "Prey", "Herbivore", "Omnivore"], answer: "Predator" },
-        { question: "49. What do we call the protective outer layer of a seed?", choices: ["Shell", "Skin", "Coat", "Cover"], answer: "Coat" },
-        { question: "50. What is the name of the force that pulls objects towards the Earth?", choices: ["Friction", "Magnetism", "Gravity", "Inertia"], answer: "Gravity" }
-           ];
+        { "question": "1. What do plants need to grow?", "choices": ["Water", "Sunlight", "Soil", "All of the above"], "answer": "All of the above" },
+        { "question": "2. Which part of the plant grows underground?", "choices": ["Stem", "Leaf", "Root", "Flower"], "answer": "Root" },
+        { "question": "3. What do animals need to stay alive?", "choices": ["Food", "Water", "Air", "All of the above"], "answer": "All of the above" },
+        { "question": "4. What is the color of the sky?", "choices": ["Blue", "Yellow", "Red", "Green"], "answer": "Blue" },
+        { "question": "5. What do we use to measure temperature?", "choices": ["Thermometer", "Scale", "Clock", "Ruler"], "answer": "Thermometer" },
+        { "question": "6. Which of these is a living thing?", "choices": ["Car", "Book", "Dog", "Rock"], "answer": "Dog" },
+        { "question": "7. What helps plants make food?", "choices": ["Soil", "Sunlight", "Water", "All of the above"], "answer": "All of the above" },
+        { "question": "8. Which of these animals can fly?", "choices": ["Cat", "Bird", "Dog", "Elephant"], "answer": "Bird" },
+        { "question": "9. What is the baby of a cat called?", "choices": ["Kitten", "Puppy", "Calf", "Lamb"], "answer": "Kitten" },
+        { "question": "10. What is the main source of energy for the Earth?", "choices": ["Moon", "Stars", "Sun", "Clouds"], "answer": "Sun" },
+        { "question": "11. What is the name of the baby of a dog?", "choices": ["Kitten", "Puppy", "Calf", "Foal"], "answer": "Puppy" },
+        { "question": "12. Which of these animals lives in the water?", "choices": ["Lion", "Fish", "Monkey", "Elephant"], "answer": "Fish" },
+        { "question": "13. Which part of the plant makes food?", "choices": ["Root", "Flower", "Leaf", "Stem"], "answer": "Leaf" },
+        { "question": "14. Which animal gives us wool?", "choices": ["Cow", "Sheep", "Goat", "Horse"], "answer": "Sheep" },
+        { "question": "15. What do we use to listen to sounds?", "choices": ["Eyes", "Hands", "Ears", "Mouth"], "answer": "Ears" },
+        { "question": "16. What do we call the process of making food in plants?", "choices": ["Breathing", "Photosynthesis", "Digestion", "Reproduction"], "answer": "Photosynthesis" },
+        { "question": "17. What part of the plant holds it in the ground?", "choices": ["Stem", "Root", "Leaf", "Flower"], "answer": "Root" },
+        { "question": "18. What is the name of the largest animal on Earth?", "choices": ["Shark", "Elephant", "Blue Whale", "Giraffe"], "answer": "Blue Whale" },
+        { "question": "19. What does a caterpillar turn into?", "choices": ["Dragonfly", "Butterfly", "Bee", "Ant"], "answer": "Butterfly" },
+        { "question": "20. Which of these animals can change color?", "choices": ["Lion", "Elephant", "Chameleon", "Tiger"], "answer": "Chameleon" },
+        { "question": "21. Which of these is not a mammal?", "choices": ["Dog", "Cat", "Fish", "Rabbit"], "answer": "Fish" },
+        { "question": "22. Which of these animals is known for hopping?", "choices": ["Elephant", "Kangaroo", "Lion", "Cow"], "answer": "Kangaroo" },
+        { "question": "23. What do bees give us?", "choices": ["Milk", "Honey", "Eggs", "Wool"], "answer": "Honey" },
+        { "question": "24. What do cows give us?", "choices": ["Milk", "Eggs", "Honey", "Meat"], "answer": "Milk" },
+        { "question": "25. What do we use to cook food?", "choices": ["Fan", "Stove", "Fridge", "Microwave"], "answer": "Stove" },
+        { "question": "26. Which of these is a source of light?", "choices": ["Moon", "Stars", "Lamp", "All of the above"], "answer": "All of the above" },
+        { "question": "27. Which animal is known as the ‘King of the Jungle’?", "choices": ["Tiger", "Lion", "Elephant", "Cheetah"], "answer": "Lion" },
+        { "question": "28. What is the color of leaves in the spring?", "choices": ["Yellow", "Green", "Red", "Orange"], "answer": "Green" },
+        { "question": "29. What helps us breathe?", "choices": ["Stomach", "Lungs", "Heart", "Eyes"], "answer": "Lungs" },
+        { "question": "30. Which animal has a trunk?", "choices": ["Elephant", "Tiger", "Lion", "Dog"], "answer": "Elephant" },
+        { "question": "31. Which of these animals lives in a den?", "choices": ["Lion", "Rabbit", "Bear", "Tiger"], "answer": "Bear" },
+        { "question": "32. What do we call the sound that birds make?", "choices": ["Roar", "Tweet", "Growl", "Bark"], "answer": "Tweet" },
+        { "question": "33. Which of these is an example of a fruit?", "choices": ["Carrot", "Potato", "Apple", "Spinach"], "answer": "Apple" },
+        { "question": "34. What is the baby of a sheep called?", "choices": ["Calf", "Kitten", "Lamb", "Puppy"], "answer": "Lamb" },
+        { "question": "35. What is the baby of a horse called?", "choices": ["Kitten", "Calf", "Foal", "Puppy"], "answer": "Foal" },
+        { "question": "36. What animal is known for having stripes?", "choices": ["Tiger", "Elephant", "Giraffe", "Lion"], "answer": "Tiger" },
+        { "question": "37. What is the process called when a solid turns into a liquid?", "choices": ["Melting", "Freezing", "Boiling", "Evaporation"], "answer": "Melting" },
+        { "question": "38. What do we call the air we breathe?", "choices": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Water"], "answer": "Oxygen" },
+        { "question": "39. Which of these animals can fly?", "choices": ["Elephant", "Bird", "Fish", "Snake"], "answer": "Bird" },
+        { "question": "40. What is the color of a sunflower?", "choices": ["Blue", "Yellow", "Red", "Pink"], "answer": "Yellow" },
+        { "question": "41. What do we use to measure weight?", "choices": ["Thermometer", "Ruler", "Balance scale", "Clock"], "answer": "Balance scale" },
+        { "question": "42. What is the main function of the stem of a plant?", "choices": ["Make food", "Carry water", "Hold the plant", "Produce flowers"], "answer": "Carry water" },
+        { "question": "43. What does the sun provide?", "choices": ["Light", "Water", "Food", "All of the above"], "answer": "Light" },
+        { "question": "44. What do you call a baby cow?", "choices": ["Foal", "Puppy", "Kitten", "Calf"], "answer": "Calf" },
+        { "question": "45. Which of these animals is a reptile?", "choices": ["Snake", "Lion", "Elephant", "Bird"], "answer": "Snake" },
+        { "question": "46. Which part of the plant absorbs water?", "choices": ["Root", "Leaf", "Stem", "Flower"], "answer": "Root" },
+        { "question": "47. Which of these animals has a shell?", "choices": ["Snake", "Elephant", "Turtle", "Lion"], "answer": "Turtle" },
+        { "question": "48. What is the baby of a bird called?", "choices": ["Kitten", "Chick", "Puppy", "Calf"], "answer": "Chick" },
+        { "question": "49. What is the color of an apple?", "choices": ["Yellow", "Red", "Green", "All of the above"], "answer": "All of the above" },
+        { "question": "50. What do plants need to make their food?", "choices": ["Sunlight", "Air", "Water", "All of the above"], "answer": "All of the above" }
+    ]
+    ;
     
 
     

@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the name of our country?", choices: ["India", "USA", "China", "Australia"], answer: "India" },
-        { question: "2. Which festival is known as the festival of lights?", choices: ["Holi", "Diwali", "Eid", "Christmas"], answer: "Diwali" },
-        { question: "3. What do we call the people who live in our country?", choices: ["Citizens", "Strangers", "Visitors", "Tourists"], answer: "Citizens" },
-        { question: "4. Which is the capital city of India?", choices: ["Mumbai", "Delhi", "Kolkata", "Chennai"], answer: "Delhi" },
-        { question: "5. What do we celebrate on Republic Day?", choices: ["Independence", "Constitution", "Diwali", "Holi"], answer: "Constitution" },
-        { question: "6. Who is the Prime Minister of India?", choices: ["Rahul Gandhi", "Narendra Modi", "Amit Shah", "Manmohan Singh"], answer: "Narendra Modi" },
-        { question: "7. What do we call the people who work to help others?", choices: ["Helpers", "Workers", "Leaders", "Volunteers"], answer: "Volunteers" },
-        { question: "8. Which animal is known as the 'King of the Jungle'?", choices: ["Elephant", "Tiger", "Lion", "Bear"], answer: "Lion" },
-        { question: "9. Which season is known for flowers blooming?", choices: ["Winter", "Summer", "Monsoon", "Spring"], answer: "Spring" },
-        { question: "10. What do we use to travel from one place to another?", choices: ["Food", "Transportation", "Clothes", "Water"], answer: "Transportation" },
-        { question: "11. What is the importance of a school?", choices: ["To play", "To learn", "To eat", "To sleep"], answer: "To learn" },
-        { question: "12. Which is the largest continent on Earth?", choices: ["Asia", "Africa", "North America", "Europe"], answer: "Asia" },
-        { question: "13. What is a family?", choices: ["Friends", "Neighbors", "People living together", "Classmates"], answer: "People living together" },
-        { question: "14. Which direction does the sun rise?", choices: ["North", "South", "East", "West"], answer: "East" },
-        { question: "15. What do we call the pictures that tell stories from the past?", choices: ["Books", "Photos", "History", "Maps"], answer: "Photos" },
-        { question: "16. What do we call our national flag?", choices: ["Tiranga", "Tricolor", "Banner", "Symbol"], answer: "Tiranga" },
-        { question: "17. What is the main language spoken in India?", choices: ["English", "Hindi", "Spanish", "French"], answer: "Hindi" },
-        { question: "18. What do we celebrate on Independence Day?", choices: ["Republic Day", "National Flag Day", "Freedom from British Rule", "Diwali"], answer: "Freedom from British Rule" },
-        { question: "19. What is the name of our national bird?", choices: ["Peacock", "Eagle", "Sparrow", "Crow"], answer: "Peacock" },
-        { question: "20. What is the primary food of India?", choices: ["Rice", "Pizza", "Burger", "Pasta"], answer: "Rice" },
-        { question: "21. Who is the President of India?", choices: ["Narendra Modi", "Sonia Gandhi", "Droupadi Murmu", "Manmohan Singh"], answer: "Droupadi Murmu" },
-        { question: "22. What do we call the place where we go to learn?", choices: ["Park", "School", "Market", "Home"], answer: "School" },
-        { question: "23. What do we call a person who teaches?", choices: ["Student", "Teacher", "Principal", "Parent"], answer: "Teacher" },
-        { question: "24. What is a community?", choices: ["A group of friends", "People living together", "A family", "A classroom"], answer: "People living together" },
-        { question: "25. Which fruit is called the 'king of fruits'?", choices: ["Mango", "Apple", "Banana", "Grapes"], answer: "Mango" },
-        { question: "26. What is the importance of water?", choices: ["To drink", "To swim", "To play", "To cook"], answer: "To drink" },
-        { question: "27. What is a map?", choices: ["A picture of food", "A drawing of a place", "A story", "A song"], answer: "A drawing of a place" },
-        { question: "28. Who do we celebrate Teachers' Day?", choices: ["To honor teachers", "To play", "To eat", "To dance"], answer: "To honor teachers" },
-        { question: "29. Which festival is celebrated with colors?", choices: ["Eid", "Diwali", "Holi", "Christmas"], answer: "Holi" },
-        { question: "30. What is the role of a doctor?", choices: ["To teach", "To help sick people", "To drive", "To cook"], answer: "To help sick people" },
-        { question: "31. Why do we need rules?", choices: ["To have fun", "To make friends", "To keep us safe", "To eat food"], answer: "To keep us safe" },
-        { question: "32. What do we call the first month of the year?", choices: ["February", "March", "January", "December"], answer: "January" },
-        { question: "33. What is the main purpose of transportation?", choices: ["To play", "To eat", "To travel", "To rest"], answer: "To travel" },
-        { question: "34. What is a tradition?", choices: ["A new game", "A custom or belief", "A type of food", "A book"], answer: "A custom or belief" },
-        { question: "35. Why do we celebrate festivals?", choices: ["To enjoy", "To sleep", "To work", "To eat"], answer: "To enjoy" },
-        { question: "36. What is the name of the holiday that celebrates the birth of Jesus?", choices: ["Eid", "Christmas", "Diwali", "Holi"], answer: "Christmas" },
-        { question: "37. Which animal is known for its intelligence?", choices: ["Dog", "Cat", "Elephant", "Lion"], answer: "Elephant" },
-        { question: "38. What do we call a person who works for the government?", choices: ["Citizen", "Public servant", "Teacher", "Doctor"], answer: "Public servant" },
-        { question: "39. How do we show respect to elders?", choices: ["By ignoring them", "By talking back", "By listening and helping", "By making noise"], answer: "By listening and helping" },
-        { question: "40. What is a capital city?", choices: ["A small town", "A place with many people", "The city where the government is", "A park"], answer: "The city where the government is" },
-        { question: "41. How do people celebrate New Year?", choices: ["By sleeping", "By partying and making noise", "By studying", "By staying quiet"], answer: "By partying and making noise" },
-        { question: "42. Why do we need to learn about our history?", choices: ["To remember the past", "To play games", "To eat food", "To sleep"], answer: "To remember the past" },
-        { question: "43. What is an occupation?", choices: ["A type of food", "A job or work", "A game", "A song"], answer: "A job or work" },
-        { question: "44. How can we show kindness to others?", choices: ["By being rude", "By helping them", "By ignoring them", "By shouting"], answer: "By helping them" },
-        { question: "45. What is the importance of festivals?", choices: ["To eat food", "To bring people together", "To sleep", "To argue"], answer: "To bring people together" },
-        { question: "46. How do we celebrate our culture?", choices: ["By following traditions", "By playing games", "By eating junk food", "By sleeping"], answer: "By following traditions" },
-        { question: "47. What do we call the rules that we follow at school?", choices: ["Games", "Laws", "School rules", "Instructions"], answer: "School rules" },
-        { question: "48. What do you think is the best way to help your community?", choices: ["By throwing trash", "By volunteering", "By being quiet", "By ignoring people"], answer: "By volunteering" },
-        { question: "49. How do you celebrate your birthday?", choices: ["By doing homework", "By having a party", "By sleeping", "By watching TV"], answer: "By having a party" },
-        { question: "50. What do you want to learn more about in the future?", choices: ["Games", "Space", "Food", "Movies"], answer: "Space" },
-           ];
+        { "question": "1. What is the capital of India?", "choices": ["Delhi", "Mumbai", "Kolkata", "Jaipur"], "answer": "Delhi" },
+        { "question": "2. What are the colors of the national flag of India?", "choices": ["Green, White and Red", "Red, White and Yellow", "White, Green and Blue", "Blue, Green and Red"], "answer": "Green, White and Red" },
+        { "question": "3. How many states are there in India?", "choices": ["28", "25", "29", "30"], "answer": "28" },
+        { "question": "4. Which is a national festival of India?", "choices": ["Diwali", "Raksha Bandhan", "Independence Day", "Holi"], "answer": "Independence Day" },
+        { "question": "5. Which animal is the largest?", "choices": ["Elephant", "Whale", "Horse", "Dog"], "answer": "Whale" },
+        { "question": "6. Which is the smallest country?", "choices": ["India", "Vatican City", "Nepal", "Pakistan"], "answer": "Vatican City" },
+        { "question": "7. What is the name of the President of India?", "choices": ["Ram Nath Kovind", "Narendra Modi", "Padmanath Yadav", "Sonia Gandhi"], "answer": "Ram Nath Kovind" },
+        { "question": "8. Which is the national animal of India?", "choices": ["Lion", "Tiger", "Elephant", "Cow"], "answer": "Tiger" },
+        { "question": "9. Which is the national bird of India?", "choices": ["Peacock", "Eagle", "Sparrow", "Crow"], "answer": "Peacock" },
+        { "question": "10. What is the national tree of India?", "choices": ["Bamboo", "Neem", "Bodhi", "Pipal"], "answer": "Bodhi" },
+        { "question": "11. How many continents are there?", "choices": ["5", "6", "7", "8"], "answer": "7" },
+        { "question": "12. What is the name of our planet?", "choices": ["Earth", "Mars", "Venus", "Saturn"], "answer": "Earth" },
+        { "question": "13. What do we get from the Sun?", "choices": ["Light", "Water", "Heat", "All of the above"], "answer": "All of the above" },
+        { "question": "14. Which is the tallest mountain in the world?", "choices": ["K2", "Mount Everest", "Kangchenjunga", "Mount Kilimanjaro"], "answer": "Mount Everest" },
+        { "question": "15. What do we drink to stay hydrated?", "choices": ["Milk", "Water", "Fruit juice", "Tea"], "answer": "Water" },
+        { "question": "16. Which is the biggest ocean?", "choices": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], "answer": "Pacific Ocean" },
+        { "question": "17. What do we wear on our head in the sun?", "choices": ["Cap", "Hat", "Sunglasses", "Scarf"], "answer": "Hat" },
+        { "question": "18. Which of these is a renewable source of energy?", "choices": ["Coal", "Oil", "Wind", "Natural Gas"], "answer": "Wind" },
+        { "question": "19. What is the shape of the Earth?", "choices": ["Round", "Square", "Flat", "Oval"], "answer": "Round" },
+        { "question": "20. What is the name of the river that flows through Varanasi?", "choices": ["Yamuna", "Ganga", "Saraswati", "Indus"], "answer": "Ganga" },
+        { "question": "21. Which is the smallest state in India?", "choices": ["Goa", "Kerala", "Sikkim", "Nagaland"], "answer": "Goa" },
+        { "question": "22. Which animal is known as the 'Ship of the Desert'?", "choices": ["Camel", "Horse", "Elephant", "Donkey"], "answer": "Camel" },
+        { "question": "23. What is the name of the Indian national flower?", "choices": ["Lotus", "Rose", "Tulip", "Sunflower"], "answer": "Lotus" },
+        { "question": "24. Which festival is known as the 'Festival of Lights'?", "choices": ["Diwali", "Holi", "Eid", "Christmas"], "answer": "Diwali" },
+        { "question": "25. Which is the longest river in India?", "choices": ["Yamuna", "Ganga", "Narmada", "Godavari"], "answer": "Ganga" },
+        { "question": "26. What is the national language of India?", "choices": ["Hindi", "English", "Tamil", "Bengali"], "answer": "Hindi" },
+        { "question": "27. What is the capital of the United States?", "choices": ["New York", "Washington D.C.", "Los Angeles", "Chicago"], "answer": "Washington D.C." },
+        { "question": "28. Which is the largest country in the world?", "choices": ["Russia", "China", "India", "United States"], "answer": "Russia" },
+        { "question": "29. What is the name of the currency used in India?", "choices": ["Dollar", "Euro", "Rupee", "Yen"], "answer": "Rupee" },
+        { "question": "30. Who is the Father of the Nation in India?", "choices": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhas Chandra Bose", "Bhagat Singh"], "answer": "Mahatma Gandhi" },
+        { "question": "31. What is the national emblem of India?", "choices": ["Lion Capital", "Ashoka Chakra", "Peacock", "Tiger"], "answer": "Lion Capital" },
+        { "question": "32. Which planet is known as the 'Red Planet'?", "choices": ["Earth", "Mars", "Jupiter", "Saturn"], "answer": "Mars" },
+        { "question": "33. Which animal is called the 'King of the Jungle'?", "choices": ["Lion", "Elephant", "Tiger", "Bear"], "answer": "Lion" },
+        { "question": "34. What is the name of the famous wall in China?", "choices": ["Great Wall of China", "Berlin Wall", "Hadrian's Wall", "China Wall"], "answer": "Great Wall of China" },
+        { "question": "35. Which of these is a plant?", "choices": ["Tree", "Stone", "Car", "Bike"], "answer": "Tree" },
+        { "question": "36. What do we call the water we drink?", "choices": ["Saltwater", "Freshwater", "Dirty Water", "Sea Water"], "answer": "Freshwater" },
+        { "question": "37. Which of these is used to write on paper?", "choices": ["Pen", "Scissors", "Hammer", "Nail"], "answer": "Pen" },
+        { "question": "38. What do we wear to keep ourselves warm in winter?", "choices": ["Shirt", "Sweater", "Cap", "Socks"], "answer": "Sweater" },
+        { "question": "39. Which bird can mimic human speech?", "choices": ["Sparrow", "Parrot", "Crow", "Pigeon"], "answer": "Parrot" },
+        { "question": "40. Which is the largest animal in the world?", "choices": ["Elephant", "Whale", "Giraffe", "Hippo"], "answer": "Whale" },
+        { "question": "41. What do we call a person who helps us when we are sick?", "choices": ["Teacher", "Doctor", "Farmer", "Driver"], "answer": "Doctor" },
+        { "question": "42. What is the name of the sky during the day?", "choices": ["Blue", "Black", "Orange", "White"], "answer": "Blue" },
+        { "question": "43. What do we call the food that grows underground?", "choices": ["Fruit", "Roots", "Leaf", "Stem"], "answer": "Roots" },
+        { "question": "44. Which is the national sport of India?", "choices": ["Football", "Cricket", "Hockey", "Basketball"], "answer": "Hockey" },
+        { "question": "45. Who is the Prime Minister of India?", "choices": ["Manmohan Singh", "Narendra Modi", "Rajiv Gandhi", "Indira Gandhi"], "answer": "Narendra Modi" },
+        { "question": "46. Which bird is known for its colorful feathers?", "choices": ["Parrot", "Peacock", "Crow", "Pigeon"], "answer": "Peacock" },
+        { "question": "47. Which is the nearest planet to the Sun?", "choices": ["Mercury", "Venus", "Earth", "Mars"], "answer": "Mercury" },
+        { "question": "48. What is the capital of France?", "choices": ["London", "Paris", "Berlin", "Rome"], "answer": "Paris" },
+        { "question": "49. Which is the national fruit of India?", "choices": ["Apple", "Banana", "Mango", "Grapes"], "answer": "Mango" },
+        { "question": "50. What is the name of the first President of India?", "choices": ["Rajendra Prasad", "Dr. Abdul Kalam", "Jawaharlal Nehru", "Indira Gandhi"], "answer": "Rajendra Prasad" }
+    ]
+    ;
     
 
     

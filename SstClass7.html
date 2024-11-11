@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the capital of India?", choices: ["Mumbai", "New Delhi", "Kolkata", "Chennai"], answer: "New Delhi" },
-        { question: "2. Who was the first Prime Minister of India?", choices: ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel", "Indira Gandhi"], answer: "Jawaharlal Nehru" },
-        { question: "3. What is the national currency of India?", choices: ["Dollar", "Rupee", "Pound", "Euro"], answer: "Rupee" },
-        { question: "4. Which river is known as the 'Ganga of the South'?", choices: ["Godavari", "Krishna", "Kaveri", "Narmada"], answer: "Godavari" },
-        { question: "5. Who is known as the 'Father of the Nation' in India?", choices: ["Mahatma Gandhi", "B. R. Ambedkar", "Subhas Chandra Bose", "Jawaharlal Nehru"], answer: "Mahatma Gandhi" },
-        { question: "6. What type of government does India have?", choices: ["Monarchy", "Democracy", "Dictatorship", "Theocracy"], answer: "Democracy" },
-        { question: "7. Which freedom fighter is known for the slogan 'Give me blood, and I shall give you freedom'?", choices: ["Bhagat Singh", "Subhas Chandra Bose", "Sardar Patel", "Mahatma Gandhi"], answer: "Subhas Chandra Bose" },
-        { question: "8. What is the longest river in India?", choices: ["Ganga", "Brahmaputra", "Indus", "Godavari"], answer: "Ganga" },
-        { question: "9. In which year did India gain independence?", choices: ["1942", "1945", "1947", "1950"], answer: "1947" },
-        { question: "10. Who wrote the Indian national anthem?", choices: ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Allama Iqbal", "Lata Mangeshkar"], answer: "Rabindranath Tagore" },
-        { question: "11. What is the main function of the legislature?", choices: ["To enforce laws", "To make laws", "To interpret laws", "To judge laws"], answer: "To make laws" },
-        { question: "12. Which state is known as the 'Land of Five Rivers'?", choices: ["Bihar", "Punjab", "Uttar Pradesh", "West Bengal"], answer: "Punjab" },
-        { question: "13. What is the main source of income for the Indian government?", choices: ["Taxation", "Trade", "Foreign Aid", "Donations"], answer: "Taxation" },
-        { question: "14. Who is the current President of India? (As of 2024)", choices: ["Ram Nath Kovind", "Droupadi Murmu", "Pranab Mukherjee", "Manmohan Singh"], answer: "Droupadi Murmu" },
-        { question: "15. Which festival is known as the Festival of Lights?", choices: ["Holi", "Eid", "Diwali", "Christmas"], answer: "Diwali" },
-        { question: "16. What is the primary occupation of most Indians?", choices: ["Service", "Agriculture", "Industry", "Business"], answer: "Agriculture" },
-        { question: "17. Which country shares the longest border with India?", choices: ["Pakistan", "Bangladesh", "Nepal", "China"], answer: "Bangladesh" },
-        { question: "18. What is the national animal of India?", choices: ["Lion", "Tiger", "Elephant", "Peacock"], answer: "Tiger" },
-        { question: "19. Which mountain range separates India from the rest of Asia?", choices: ["Himalayas", "Western Ghats", "Aravalli", "Vindhya"], answer: "Himalayas" },
-        { question: "20. What is the capital of Maharashtra?", choices: ["Mumbai", "Pune", "Nagpur", "Nashik"], answer: "Mumbai" },
-        { question: "21. Who was the first woman Prime Minister of India?", choices: ["Indira Gandhi", "Pratibha Patil", "Sonia Gandhi", "Kiran Bedi"], answer: "Indira Gandhi" },
-        { question: "22. What is the official language of India?", choices: ["Hindi", "English", "Bengali", "All of the above"], answer: "All of the above" },
-        { question: "23. Which Indian state is known for its backwaters?", choices: ["Karnataka", "Kerala", "Goa", "Maharashtra"], answer: "Kerala" },
-        { question: "24. What is the smallest state in India by area?", choices: ["Goa", "Sikkim", "Nagaland", "Tripura"], answer: "Goa" },
-        { question: "25. Who is known as the 'Iron Man of India'?", choices: ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Bhagat Singh"], answer: "Sardar Vallabhbhai Patel" },
-        { question: "26. What does the 'Ashoka Chakra' in the Indian flag represent?", choices: ["Peace and Harmony", "Courage", "Power", "Truth"], answer: "Peace and Harmony" },
-        { question: "27. Which city is known as the Silicon Valley of India?", choices: ["Mumbai", "Pune", "Bangalore", "Hyderabad"], answer: "Bangalore" },
-        { question: "28. What is the main reason for monsoon in India?", choices: ["Winds", "Earthquakes", "Tsunamis", "Volcanic Eruptions"], answer: "Winds" },
-        { question: "29. What is the currency of India?", choices: ["Dollar", "Rupee", "Pound", "Euro"], answer: "Rupee" },
-        { question: "30. Which Indian festival is celebrated with colors?", choices: ["Diwali", "Eid", "Holi", "Christmas"], answer: "Holi" },
-        { question: "31. What is the highest civilian award in India?", choices: ["Bharat Ratna", "Padma Bhushan", "Mahatma Gandhi Peace Prize", "Jewel of India"], answer: "Bharat Ratna" },
-        { question: "32. Which is the largest continent in the world?", choices: ["Asia", "Africa", "North America", "Europe"], answer: "Asia" },
-        { question: "33. What type of government does India follow?", choices: ["Federal", "Unitary", "Confederate", "None of the above"], answer: "Federal" },
-        { question: "34. Who is the author of the Indian Constitution?", choices: ["Mahatma Gandhi", "B. R. Ambedkar", "Jawaharlal Nehru", "Sardar Patel"], answer: "B. R. Ambedkar" },
-        { question: "35. Which Indian city is famous for its IT industry?", choices: ["Mumbai", "Chennai", "Hyderabad", "Delhi"], answer: "Hyderabad" },
-        { question: "36. What is the primary source of energy in India?", choices: ["Solar Energy", "Wind Energy", "Coal", "Nuclear Energy"], answer: "Coal" },
-        { question: "37. What is the name of the national bird of India?", choices: ["Peacock", "Parrot", "Eagle", "Sparrow"], answer: "Peacock" },
-        { question: "38. Which ocean is to the south of India?", choices: ["Atlantic Ocean", "Arctic Ocean", "Indian Ocean", "Pacific Ocean"], answer: "Indian Ocean" },
-        { question: "39. What is the main objective of the Panchayati Raj system?", choices: ["Urban development", "Rural self-governance", "Industrial growth", "Environmental protection"], answer: "Rural self-governance" },
-        { question: "40. Which is the largest democracy in the world?", choices: ["USA", "China", "India", "Brazil"], answer: "India" },
-        { question: "41. Who is known as the 'Missile Man of India'?", choices: ["M. S. Swaminathan", "A. P. J. Abdul Kalam", "Vikram Sarabhai", "C. V. Raman"], answer: "A. P. J. Abdul Kalam" },
-        { question: "42. Which state is known for its tea gardens?", choices: ["Kerala", "West Bengal", "Assam", "Himachal Pradesh"], answer: "Assam" },
-        { question: "43. What is the fundamental right to equality in India?", choices: ["Right to Education", "Right to Life", "Right to Freedom", "Right to Equality"], answer: "Right to Equality" },
-        { question: "44. Who was the first President of India?", choices: ["Dr. Rajendra Prasad", "Dr. S. Radhakrishnan", "Dr. Zakir Husain", "Indira Gandhi"], answer: "Dr. Rajendra Prasad" },
-        { question: "45. What is the official emblem of India?", choices: ["Lion Capital of Ashoka", "Peacock", "Bharat Mata", "Taj Mahal"], answer: "Lion Capital of Ashoka" },
-        { question: "46. Which country is India’s neighbor to the north?", choices: ["Bangladesh", "Nepal", "Bhutan", "Pakistan"], answer: "Nepal" },
-        { question: "47. What is the significance of 15th August in India?", choices: ["Gandhi Jayanti", "Republic Day", "Independence Day", "Children's Day"], answer: "Independence Day" },
-        { question: "48. Which is the national flower of India?", choices: ["Rose", "Lotus", "Sunflower", "Lily"], answer: "Lotus" },
-        { question: "49. Which ancient civilization was located in the Indus Valley?", choices: ["Mayan", "Egyptian", "Harappan", "Mesopotamian"], answer: "Harappan" },
-        { question: "50. What does the term 'Globalization' refer to?", choices: ["Isolation of countries", "Increased trade and communication", "Local market growth", "None of the above"], answer: "Increased trade and communication" }
-    ];
+        {"question": "1. Who was the first Governor-General of independent India?", "choices": ["Lord Mountbatten", "Jawaharlal Nehru", "C. Rajagopalachari", "Mahatma Gandhi"], "answer": "Lord Mountbatten"},
+        {"question": "2. The first battle of Panipat was fought in which year?", "choices": ["1526", "1556", "1761", "1857"], "answer": "1526"},
+        {"question": "3. Who was the first Emperor of the Mughal Empire?", "choices": ["Babur", "Akbar", "Aurangzeb", "Humayun"], "answer": "Babur"},
+        {"question": "4. The 'Taj Mahal' is located in which city?", "choices": ["Agra", "Delhi", "Mumbai", "Lucknow"], "answer": "Agra"},
+        {"question": "5. Who was the leader of the Quit India Movement in 1942?", "choices": ["Subhas Chandra Bose", "Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel"], "answer": "Mahatma Gandhi"},
+        {"question": "6. The Indian Independence Act was passed in which year?", "choices": ["1947", "1935", "1857", "1909"], "answer": "1947"},
+        {"question": "7. Who was the first President of India?", "choices": ["Dr. Rajendra Prasad", "Dr. Sarvepalli Radhakrishnan", "Zakir Husain", "Jawaharlal Nehru"], "answer": "Dr. Rajendra Prasad"},
+        {"question": "8. Who was the founder of the Maurya Empire?", "choices": ["Chandragupta Maurya", "Ashoka", "Bindusara", "Kanishka"], "answer": "Chandragupta Maurya"},
+        {"question": "9. Who was the last Mughal emperor?", "choices": ["Akbar", "Shah Jahan", "Bahadur Shah Zafar", "Aurangzeb"], "answer": "Bahadur Shah Zafar"},
+        {"question": "10. The famous 'Qutub Minar' is located in which city?", "choices": ["Delhi", "Agra", "Jaipur", "Mumbai"], "answer": "Delhi"},
+        {"question": "11. Who introduced the 'Doctrine of Lapse'?", "choices": ["Lord Dalhousie", "Lord Curzon", "Lord Mountbatten", "Warren Hastings"], "answer": "Lord Dalhousie"},
+        {"question": "12. The famous 'Salt March' was led by?", "choices": ["Mahatma Gandhi", "Subhas Chandra Bose", "Jawaharlal Nehru", "Sardar Patel"], "answer": "Mahatma Gandhi"},
+        {"question": "13. Who was the first woman Prime Minister of India?", "choices": ["Indira Gandhi", "Sarojini Naidu", "Pratibha Patil", "Sonia Gandhi"], "answer": "Indira Gandhi"},
+        {"question": "14. The Battle of Plassey was fought in which year?", "choices": ["1757", "1803", "1789", "1795"], "answer": "1757"},
+        {"question": "15. The capital of the Chola Empire was?", "choices": ["Delhi", "Madurai", "Tanjore", "Kanchipuram"], "answer": "Tanjore"},
+        {"question": "16. The capital of India during the British rule was?", "choices": ["Kolkata", "Delhi", "Mumbai", "Chennai"], "answer": "Kolkata"},
+        {"question": "17. Who was the first woman President of India?", "choices": ["Pratibha Patil", "Indira Gandhi", "Sarojini Naidu", "Sonia Gandhi"], "answer": "Pratibha Patil"},
+        {"question": "18. The first battle of Panipat was fought between Babur and which ruler?", "choices": ["Ibrahim Lodi", "Sher Shah Suri", "Humayun", "Akbar"], "answer": "Ibrahim Lodi"},
+        {"question": "19. Who introduced the 'Western Education' system in India?", "choices": ["Lord Macaulay", "Lord Mountbatten", "Warren Hastings", "Lord Dalhousie"], "answer": "Lord Macaulay"},
+        {"question": "20. The famous 'Gateway of India' is located in which city?", "choices": ["Mumbai", "Delhi", "Kolkata", "Chennai"], "answer": "Mumbai"},
+        {"question": "21. Who founded the Indian National Congress?", "choices": ["Mahatma Gandhi", "Subhas Chandra Bose", "Allan Octavian Hume", "Jawaharlal Nehru"], "answer": "Allan Octavian Hume"},
+        {"question": "22. The capital of the Gupta Empire was?", "choices": ["Patliputra", "Kashgar", "Madurai", "Delhi"], "answer": "Patliputra"},
+        {"question": "23. The Indian national Congress was founded in which year?", "choices": ["1885", "1905", "1857", "1935"], "answer": "1885"},
+        {"question": "24. The famous 'Jallianwala Bagh' massacre took place in which city?", "choices": ["Amritsar", "Delhi", "Ludhiana", "Kolkata"], "answer": "Amritsar"},
+        {"question": "25. Who was the first Governor-General of independent India?", "choices": ["Lord Mountbatten", "C. Rajagopalachari", "Jawaharlal Nehru", "Mahatma Gandhi"], "answer": "Lord Mountbatten"},
+        {"question": "26. Who was the founder of the Maratha Empire?", "choices": ["Shivaji Maharaj", "Aurangzeb", "Baji Rao I", "Shah Jahan"], "answer": "Shivaji Maharaj"},
+        {"question": "27. The 'Rashtrapati Bhavan' is located in which city?", "choices": ["Delhi", "Mumbai", "Agra", "Jaipur"], "answer": "Delhi"},
+        {"question": "28. Who was the leader of the first revolt of 1857?", "choices": ["Mangal Pandey", "Rani Lakshmibai", "Bahadur Shah Zafar", "Nana Saheb"], "answer": "Mangal Pandey"},
+        {"question": "29. The famous 'Sanchi Stupa' is located in which state?", "choices": ["Madhya Pradesh", "Uttarakhand", "Maharashtra", "Himachal Pradesh"], "answer": "Madhya Pradesh"},
+        {"question": "30. The 'Indus Valley Civilization' was discovered in which year?", "choices": ["1920", "1930", "1845", "1950"], "answer": "1920"},
+        {"question": "31. The famous 'Chola Dynasty' ruled in which part of India?", "choices": ["Southern India", "Northern India", "Eastern India", "Western India"], "answer": "Southern India"},
+        {"question": "32. The first iron pillar of India is located in which city?", "choices": ["Delhi", "Jaipur", "Agra", "Kolkata"], "answer": "Delhi"},
+        {"question": "33. The 'Dandi March' was led by?", "choices": ["Mahatma Gandhi", "Subhas Chandra Bose", "Jawaharlal Nehru", "Sardar Patel"], "answer": "Mahatma Gandhi"},
+        {"question": "34. The famous 'Golden Temple' is located in which city?", "choices": ["Amritsar", "Delhi", "Lucknow", "Patiala"], "answer": "Amritsar"},
+        {"question": "35. Who wrote the book 'Discovery of India'?", "choices": ["Jawaharlal Nehru", "Subhas Chandra Bose", "Mahatma Gandhi", "Vikram Sarabhai"], "answer": "Jawaharlal Nehru"},
+        {"question": "36. The famous 'Hawa Mahal' is located in which city?", "choices": ["Jaipur", "Delhi", "Mumbai", "Agra"], "answer": "Jaipur"},
+        {"question": "37. The 'Rani of Jhansi' was a warrior queen from which state?", "choices": ["Uttar Pradesh", "Madhya Pradesh", "Himachal Pradesh", "Uttarakhand"], "answer": "Uttar Pradesh"},
+        {"question": "38. The capital of Maurya Empire was?", "choices": ["Patliputra", "Pataliputra", "Tanjore", "Agra"], "answer": "Patliputra"},
+        {"question": "39. Who is known as the 'Father of the Nation'?", "choices": ["Mahatma Gandhi", "Jawaharlal Nehru", "Subhas Chandra Bose", "Sardar Patel"], "answer": "Mahatma Gandhi"},
+        {"question": "40. The famous 'Victoria Memorial' is located in which city?", "choices": ["Kolkata", "Chennai", "Mumbai", "Delhi"], "answer": "Kolkata"},
+        {"question": "41. The 'Salt March' started from which place?", "choices": ["Sabarmati Ashram", "Delhi", "Chennai", "Kolkata"], "answer": "Sabarmati Ashram"},
+        {"question": "42. Who led the Indian National Army during World War II?", "choices": ["Subhas Chandra Bose", "Mahatma Gandhi", "Jawaharlal Nehru", "Lal Bahadur Shastri"], "answer": "Subhas Chandra Bose"},
+        {"question": "43. The famous 'Ajanta Caves' are located in which state?", "choices": ["Maharashtra", "Uttarakhand", "Karnataka", "Andhra Pradesh"], "answer": "Maharashtra"},
+        {"question": "44. Who was the first woman to receive the Bharat Ratna?", "choices": ["Indira Gandhi", "Sarojini Naidu", "Mother Teresa", "Vikram Sarabhai"], "answer": "Indira Gandhi"},
+        {"question": "45. The famous 'Jantar Mantar' is located in which city?", "choices": ["Jaipur", "Delhi", "Mumbai", "Agra"], "answer": "Jaipur"},
+        {"question": "46. The famous 'Red Fort' is located in which city?", "choices": ["Delhi", "Mumbai", "Lucknow", "Jaipur"], "answer": "Delhi"},
+        {"question": "47. The first battle of Panipat was fought between which two powers?", "choices": ["Mughal Empire and Lodi Sultanate", "Mughal Empire and Rajputs", "Mughal Empire and Marathas", "Mughal Empire and Portuguese"], "answer": "Mughal Empire and Lodi Sultanate"},
+        {"question": "48. The national currency of India is?", "choices": ["Rupee", "Dollar", "Pound", "Yen"], "answer": "Rupee"},
+        {"question": "49. Who was the founder of the Indian National Congress?", "choices": ["Allan Octavian Hume", "Lal Lajpat Rai", "Bal Gangadhar Tilak", "Subhas Chandra Bose"], "answer": "Allan Octavian Hume"},
+        {"question": "50. Who was the last Governor-General of independent India?", "choices": ["C. Rajagopalachari", "Lord Mountbatten", "Jawaharlal Nehru", "Mahatma Gandhi"], "answer": "C. Rajagopalachari"}
+      ]
+      ;
     
 
     

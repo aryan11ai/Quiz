@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. What is the largest organ in the human body?", choices: ["Heart", "Liver", "Skin", "Lungs"], answer: "Skin" },
-        { question: "2. What do plants need to grow?", choices: ["Rocks", "Water", "Plastic", "Books"], answer: "Water" },
-        { question: "3. What color is the sky on a clear day?", choices: ["Red", "Blue", "Green", "Yellow"], answer: "Blue" },
-        { question: "4. Name one animal that can fly.", choices: ["Dog", "Fish", "Bird", "Cat"], answer: "Bird" },
-        { question: "5. What do we call water when it is frozen?", choices: ["Juice", "Ice", "Steam", "Snow"], answer: "Ice" },
-        { question: "6. What do bees make?", choices: ["Milk", "Honey", "Bread", "Jam"], answer: "Honey" },
-        { question: "7. How many legs does a spider have?", choices: ["Four", "Six", "Eight", "Ten"], answer: "Eight" },
-        { question: "8. What do we breathe in to stay alive?", choices: ["Water", "Food", "Air", "Light"], answer: "Air" },
-        { question: "9. Name a fruit that is yellow.", choices: ["Apple", "Banana", "Grape", "Orange"], answer: "Banana" },
-        { question: "10. What part of the plant is green and helps it make food?", choices: ["Root", "Flower", "Stem", "Leaf"], answer: "Leaf" },
-        { question: "11. What do we call a baby cat?", choices: ["Puppy", "Kitten", "Calf", "Chick"], answer: "Kitten" },
-        { question: "12. Why do we need to drink water?", choices: ["To eat", "To grow", "To sleep", "To breathe"], answer: "To grow" },
-        { question: "13. How do birds help flowers?", choices: ["They eat them", "They carry seeds", "They scare insects", "They drink nectar"], answer: "They carry seeds" },
-        { question: "14. What happens to leaves in the fall?", choices: ["They turn red", "They grow", "They bloom", "They stay green"], answer: "They turn red" },
-        { question: "15. Can you name two things that are alive and two that are not?", choices: ["Plants and rocks", "Animals and trees", "Clouds and cars", "Fish and paper"], answer: "Animals and trees" },
-        { question: "16. Why do we wear sunscreen?", choices: ["To smell nice", "To protect our skin", "To stay cool", "To look good"], answer: "To protect our skin" },
-        { question: "17. How does the sun help plants?", choices: ["It gives them water", "It helps them grow", "It makes them colorful", "It makes them smell good"], answer: "It helps them grow" },
-        { question: "18. What happens when you mix water and sand?", choices: ["They disappear", "They make mud", "They float", "They become dry"], answer: "They make mud" },
-        { question: "19. Why do some animals hibernate in winter?", choices: ["To sleep longer", "To find food", "To stay warm", "To have babies"], answer: "To stay warm" },
-        { question: "20. How do we know that something is alive?", choices: ["It moves", "It is colorful", "It is big", "It has a shape"], answer: "It moves" },
-        { question: "21. What do you think would happen if there were no plants on Earth?", choices: ["It would be cold", "Animals would have no food", "The sky would be blue", "People would be happy"], answer: "Animals would have no food" },
-        { question: "22. How can we protect the environment?", choices: ["By littering", "By recycling", "By using plastic", "By cutting down trees"], answer: "By recycling" },
-        { question: "23. Why do you think some animals live in water and others on land?", choices: ["They like different foods", "They can fly", "They have different homes", "They need different temperatures"], answer: "They need different temperatures" },
-        { question: "24. What do you think makes a good pet?", choices: ["A loud pet", "A friendly pet", "A pet that eats a lot", "A pet that runs away"], answer: "A friendly pet" },
-        { question: "25. How do you think a caterpillar changes into a butterfly?", choices: ["By eating a lot", "By sleeping", "By going into a cocoon", "By flying"], answer: "By going into a cocoon" },
-        { question: "26. Why do you think it’s important to take care of animals?", choices: ["They are funny", "They help us", "They are noisy", "They can fly"], answer: "They help us" },
-        { question: "27. Can you think of ways to save water at home?", choices: ["Leave the tap running", "Take shorter showers", "Water the plants a lot", "Fill the bathtub"], answer: "Take shorter showers" },
-        { question: "28. What would happen if it rained every day?", choices: ["The sun would shine", "Plants would grow faster", "Animals would fly", "The ground would flood"], answer: "The ground would flood" },
-        { question: "29. How do you feel when you see pollution in nature?", choices: ["Happy", "Sad", "Excited", "Confused"], answer: "Sad" },
-        { question: "30. Why is it important to wash your hands?", choices: ["To look pretty", "To keep clean", "To feel cold", "To eat food"], answer: "To keep clean" },
-        { question: "31. Imagine you could invent a new animal. What would it be like?", choices: ["A flying fish", "A walking tree", "A swimming cat", "A singing dog"], answer: "A flying fish" },
-        { question: "32. If you could choose one animal to be your friend, which one would you choose and why?", choices: ["A lion", "A turtle", "A rabbit", "A dinosaur"], answer: "A rabbit" },
-        { question: "33. How would you describe your favorite season and why you like it?", choices: ["Winter because of snow", "Summer because of heat", "Spring because of flowers", "Fall because of leaves"], answer: "Spring because of flowers" },
-        { question: "34. What would you do if you found a baby bird on the ground?", choices: ["Leave it there", "Take it home", "Call for help", "Ignore it"], answer: "Call for help" },
-        { question: "35. How can you tell if a food is healthy or not?", choices: ["If it looks colorful", "If it is in a box", "If it tastes good", "If it is expensive"], answer: "If it looks colorful" },
-        { question: "36. What would happen if everyone planted a tree?", choices: ["It would rain", "There would be more air", "Animals would leave", "People would be tired"], answer: "There would be more air" },
-        { question: "37. How do you think different animals adapt to their environment?", choices: ["By wearing clothes", "By changing colors", "By flying high", "By eating food"], answer: "By changing colors" },
-        { question: "38. What can you do to help keep your classroom clean?", choices: ["Throw trash on the floor", "Help pick up litter", "Break things", "Hide your things"], answer: "Help pick up litter" },
-        { question: "39. If you could ask a scientist one question, what would it be?", choices: ["Why is the sky blue?", "What is your favorite food?", "Do you like pets?", "How tall are you?"], answer: "Why is the sky blue?" },
-        { question: "40. What do you think is the most important thing to remember about taking care of our planet?", choices: ["To keep it dirty", "To keep it clean", "To ignore it", "To use plastic"], answer: "To keep it clean" },
-        { question: "41. Why do you think people should recycle?", choices: ["To help the planet", "To make money", "To create more trash", "To throw things away"], answer: "To help the planet" },
-        { question: "42. How do you think animals find food?", choices: ["By asking humans", "By searching around", "By sleeping", "By sitting still"], answer: "By searching around" },
-        { question: "43. What are some ways we can use less plastic?", choices: ["By using plastic bags", "By using reusable bags", "By buying more toys", "By ignoring plastic"], answer: "By using reusable bags" },
-        { question: "44. If you were a scientist for a day, what would you want to study?", choices: ["Animals", "Plants", "The ocean", "Space"], answer: "Animals" },
-        { question: "45. What is your favorite way to enjoy nature?", choices: ["By watching TV", "By playing outside", "By staying indoors", "By sleeping"], answer: "By playing outside" },
-        { question: "46. How do you think the weather affects our daily lives?", choices: ["It doesn't matter", "It makes us happy", "It helps us decide what to wear", "It makes us tired"], answer: "It helps us decide what to wear" },
-        { question: "47. What do you think would happen if there were no insects?", choices: ["Flowers would bloom", "Plants would die", "Animals would be happy", "It would be colder"], answer: "Plants would die" },
-        { question: "48. How can families work together to help the environment?", choices: ["By littering together", "By cleaning up parks", "By wasting water", "By ignoring pollution"], answer: "By cleaning up parks" },
-        { question: "49. What makes you curious about the world around you?", choices: ["Colors and sounds", "Homework", "Video games", "Movies"], answer: "Colors and sounds" },
-        { question: "50. If you could change one thing about nature, what would it be and why?", choices: ["To make more animals", "To make it rain all the time", "To have no plants", "To make everything plastic"], answer: "To make more animals" },
-       ];
+        { "question": "1. What do plants need to grow?", "choices": ["Water", "Sunlight", "Soil", "All of the above"], "answer": "All of the above" },
+        { "question": "2. Which part of the plant grows underground?", "choices": ["Stem", "Leaf", "Root", "Flower"], "answer": "Root" },
+        { "question": "3. Which of these is an animal?", "choices": ["Apple", "Dog", "Tree", "Flower"], "answer": "Dog" },
+        { "question": "4. What do animals need to stay alive?", "choices": ["Food", "Water", "Air", "All of the above"], "answer": "All of the above" },
+        { "question": "5. Which part of the plant makes food?", "choices": ["Root", "Flower", "Leaf", "Stem"], "answer": "Leaf" },
+        { "question": "6. What is the color of the sky during the day?", "choices": ["Blue", "Green", "Yellow", "Red"], "answer": "Blue" },
+        { "question": "7. What do we use to measure temperature?", "choices": ["Thermometer", "Scale", "Clock", "Ruler"], "answer": "Thermometer" },
+        { "question": "8. Which of these is a season?", "choices": ["Monday", "Summer", "January", "Green"], "answer": "Summer" },
+        { "question": "9. Which of these is a non-living thing?", "choices": ["Rock", "Bird", "Tree", "Fish"], "answer": "Rock" },
+        { "question": "10. What do we breathe in to live?", "choices": ["Oxygen", "Water", "Food", "Light"], "answer": "Oxygen" },
+        { "question": "11. What do we drink to stay hydrated?", "choices": ["Water", "Juice", "Milk", "All of the above"], "answer": "All of the above" },
+        { "question": "12. Which of these is a living thing?", "choices": ["Rock", "Plant", "Car", "Table"], "answer": "Plant" },
+        { "question": "13. What is the main source of energy for the Earth?", "choices": ["Moon", "Stars", "Sun", "Clouds"], "answer": "Sun" },
+        { "question": "14. What animal says ‘meow’?", "choices": ["Dog", "Cat", "Cow", "Sheep"], "answer": "Cat" },
+        { "question": "15. Which of these is the fastest animal?", "choices": ["Cheetah", "Elephant", "Lion", "Tiger"], "answer": "Cheetah" },
+        { "question": "16. How many legs does a spider have?", "choices": ["4", "6", "8", "10"], "answer": "8" },
+        { "question": "17. What do we use to see things?", "choices": ["Eyes", "Hands", "Ears", "Nose"], "answer": "Eyes" },
+        { "question": "18. What do we use to listen to sounds?", "choices": ["Nose", "Eyes", "Ears", "Mouth"], "answer": "Ears" },
+        { "question": "19. What grows on trees?", "choices": ["Flowers", "Fruits", "Leaves", "All of the above"], "answer": "All of the above" },
+        { "question": "20. What do birds have to help them fly?", "choices": ["Wings", "Fins", "Legs", "Tentacles"], "answer": "Wings" },
+        { "question": "21. Which of these is a plant?", "choices": ["Dog", "Cat", "Tree", "Car"], "answer": "Tree" },
+        { "question": "22. What is the main function of the roots?", "choices": ["Make food", "Hold the plant", "Carry water", "Produce flowers"], "answer": "Carry water" },
+        { "question": "23. What is the name of the baby of a dog?", "choices": ["Kitten", "Puppy", "Calf", "Cub"], "answer": "Puppy" },
+        { "question": "24. Which of these animals can fly?", "choices": ["Dog", "Bat", "Cow", "Elephant"], "answer": "Bat" },
+        { "question": "25. What do we call the water that falls from the sky?", "choices": ["Rain", "Sun", "Wind", "Snow"], "answer": "Rain" },
+        { "question": "26. Which of these is a fruit?", "choices": ["Carrot", "Apple", "Lettuce", "Spinach"], "answer": "Apple" },
+        { "question": "27. Which of these animals lives in the water?", "choices": ["Cat", "Dog", "Fish", "Horse"], "answer": "Fish" },
+        { "question": "28. Which of these is a mammal?", "choices": ["Fish", "Bird", "Elephant", "Snake"], "answer": "Elephant" },
+        { "question": "29. What do cows give us?", "choices": ["Wool", "Milk", "Eggs", "Honey"], "answer": "Milk" },
+        { "question": "30. What do we use to stay warm?", "choices": ["Coat", "Water", "Fan", "Fire"], "answer": "Coat" },
+        { "question": "31. What helps plants grow?", "choices": ["Food", "Water", "Air", "All of the above"], "answer": "All of the above" },
+        { "question": "32. What do we get from bees?", "choices": ["Honey", "Milk", "Eggs", "Wool"], "answer": "Honey" },
+        { "question": "33. What is the color of leaves in the spring?", "choices": ["Green", "Yellow", "Red", "Orange"], "answer": "Green" },
+        { "question": "34. What is the baby of a cat called?", "choices": ["Puppy", "Kitten", "Calf", "Cub"], "answer": "Kitten" },
+        { "question": "35. Which animal has a long neck?", "choices": ["Elephant", "Giraffe", "Lion", "Tiger"], "answer": "Giraffe" },
+        { "question": "36. What do we use to cook food?", "choices": ["Stove", "Fan", "Fridge", "Microwave"], "answer": "Stove" },
+        { "question": "37. Which animal is known as the king of the jungle?", "choices": ["Tiger", "Elephant", "Lion", "Giraffe"], "answer": "Lion" },
+        { "question": "38. What do plants use to make food?", "choices": ["Water", "Sunlight", "Soil", "All of the above"], "answer": "All of the above" },
+        { "question": "39. What is the baby of a cow called?", "choices": ["Calf", "Puppy", "Kitten", "Foal"], "answer": "Calf" },
+        { "question": "40. What do we call the body covering of a fish?", "choices": ["Feathers", "Skin", "Fur", "Scales"], "answer": "Scales" },
+        { "question": "41. Which animal has a trunk?", "choices": ["Lion", "Elephant", "Monkey", "Giraffe"], "answer": "Elephant" },
+        { "question": "42. What is the largest planet in our solar system?", "choices": ["Earth", "Mars", "Jupiter", "Venus"], "answer": "Jupiter" },
+        { "question": "43. What helps plants get food from the sun?", "choices": ["Roots", "Flowers", "Leaves", "Stems"], "answer": "Leaves" },
+        { "question": "44. Which animal has wings and can fly?", "choices": ["Elephant", "Bird", "Fish", "Cat"], "answer": "Bird" },
+        { "question": "45. What do we use to sleep?", "choices": ["Bed", "Sofa", "Chair", "Table"], "answer": "Bed" },
+        { "question": "46. What is the color of the sun?", "choices": ["Yellow", "Red", "Green", "Blue"], "answer": "Yellow" },
+        { "question": "47. What is the name of the baby of a sheep?", "choices": ["Lamb", "Puppy", "Kitten", "Calf"], "answer": "Lamb" },
+        { "question": "48. What is used to make paper?", "choices": ["Wood", "Plastic", "Metal", "Cloth"], "answer": "Wood" },
+        { "question": "49. Which animal lays eggs?", "choices": ["Bird", "Cow", "Dog", "Elephant"], "answer": "Bird" },
+        { "question": "50. What is the color of the grass?", "choices": ["Green", "Blue", "Yellow", "Red"], "answer": "Green" }
+    ]
+    ;
     
 
     

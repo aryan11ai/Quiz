@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
+            background: linear-gradient(to right, #ff8800, #ff0000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +195,13 @@
             width: 95%;
             height: 95%;
             background-color: rgba(0, 0, 0, 0);
-            border: 4px solid yellow;
+            border: 4px solid rgb(162, 0, 255);
             z-index: 100000000000000000000000000000000000000000000000000; /* High z-index for border */
             top: 0; /* Align border to the top */
             left: 0; /* Align border to the left */
         }
         .line {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -214,7 +214,7 @@
             width: 0;
             height: 0;
             border-left: 20vh solid transparent; /* Triangle base */
-            border-top: 20vh solid yellow; /* Triangle color */
+            border-top: 20vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: 100000000;
         }
         .large-traingle-left {
@@ -224,7 +224,7 @@
             width: 0;
             height: 0;
             border-right: 20vh solid transparent; /* Triangle base */
-            border-bottom: 20vh solid yellow; /* Triangle color */
+            border-bottom: 20vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .large-line-traingle-right {
             position: absolute;
@@ -233,7 +233,7 @@
             width: 0;
             height: 0;
             border-right: 50vh solid transparent; /* Triangle base */
-            border-top: 50vh solid green; /* Triangle color */
+            border-top: 50vh solid rgb(0, 183, 255); /* Triangle color */
         }
         .large-line-line-traingle-right {
             position: absolute;
@@ -242,7 +242,7 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-top: 10vh solid yellow; /* Triangle color */
+            border-top: 10vh solid rgb(162, 0, 255); /* Triangle color */
         }
         .small-line-line-traingle-right {
             position: absolute;
@@ -251,11 +251,11 @@
             width: 35vh;
             height: 0;
             border-right: 10vh solid transparent; /* Triangle base */
-            border-bottom: 4vh solid yellow; /* Triangle color */
+            border-bottom: 4vh solid rgb(162, 0, 255); /* Triangle color */
             z-index: -100000;
         }
         .line-bottom {
-            background-color: green;
+            background-color: rgb(0, 183, 255);
             width: 100%;
             height: 10vh;
             position: absolute;
@@ -268,7 +268,7 @@
             width: 0;
             height: 0;
             border-left: 40vh solid transparent; /* Triangle base */
-            border-bottom: 40vh solid green; /* Triangle color */
+            border-bottom: 40vh solid rgb(0, 183, 255); /* Triangle color */
             z-index: 100000000;
         }
         .border h1{
@@ -497,57 +497,58 @@ c0 -5 -5 -40 -10 -77 -6 -37 -12 -81 -14 -97 -2 -17 -4 -33 -5 -37 0 -5 -5 -8
 
     <script>
         const quizData = [
-        { question: "1. 7 + 8 = ?", choices: ["15", "16", "14", "17"], answer: "15" },
-        { question: "2. 9 - 4 = ?", choices: ["3", "5", "7", "6"], answer: "5" },
-        { question: "3. 5 × 6 = ?", choices: ["30", "36", "28", "25"], answer: "30" },
-        { question: "4. 12 ÷ 3 = ?", choices: ["6", "5", "4", "3"], answer: "4" },
-        { question: "5. 3² = ?", choices: ["6", "9", "12", "15"], answer: "9" },
-        { question: "6. 8 + 2 × 5 = ?", choices: ["18", "20", "22", "15"], answer: "18" },
-        { question: "7. 15% of 200 = ?", choices: ["30", "25", "20", "15"], answer: "30" },
-        { question: "8. 5² - 3² = ?", choices: ["16", "20", "18", "12"], answer: "16" },
-        { question: "9. 18 ÷ (2 + 4) = ?", choices: ["3", "6", "4", "5"], answer: "3" },
-        { question: "10. 1/4 + 1/4 = ?", choices: ["1/2", "1/4", "1/3", "3/4"], answer: "1/2" },
-        { question: "11. 25% of 300 = ?", choices: ["75", "50", "25", "100"], answer: "75" },
-        { question: "12. 2 × 3 + 4 = ?", choices: ["10", "8", "6", "12"], answer: "10" },
-        { question: "13. √64 = ?", choices: ["6", "8", "10", "12"], answer: "8" },
-        { question: "14. 3 × (4 + 5) = ?", choices: ["27", "30", "24", "18"], answer: "27" },
-        { question: "15. 5 × 5 = ?", choices: ["25", "30", "20", "15"], answer: "25" },
-        { question: "16. 7 - 3 + 5 = ?", choices: ["9", "10", "8", "6"], answer: "9" },
-        { question: "17. 20% of 50 = ?", choices: ["5", "10", "15", "20"], answer: "10" },
-        { question: "18. 15 + 30 - 12 = ?", choices: ["33", "28", "27", "25"], answer: "33" },
-        { question: "19. 12 × 3 = ?", choices: ["36", "28", "24", "32"], answer: "36" },
-        { question: "20. 100 - 45 = ?", choices: ["50", "55", "60", "65"], answer: "55" },
-        { question: "21. 9 × 7 = ?", choices: ["63", "72", "49", "56"], answer: "63" },
-        { question: "22. 6 × 6 = ?", choices: ["36", "42", "30", "32"], answer: "36" },
-        { question: "23. 4/5 - 1/5 = ?", choices: ["1/5", "2/5", "3/5", "4/5"], answer: "3/5" },
-        { question: "24. 8 + 12 - 5 = ?", choices: ["15", "20", "25", "18"], answer: "15" },
-        { question: "25. 40% of 80 = ?", choices: ["32", "40", "28", "20"], answer: "32" },
-        { question: "26. 36 ÷ 6 = ?", choices: ["5", "6", "7", "8"], answer: "6" },
-        { question: "27. 18 - 9 + 2 = ?", choices: ["9", "11", "10", "12"], answer: "11" },
-        { question: "28. 45 + 55 = ?", choices: ["100", "110", "90", "80"], answer: "100" },
-        { question: "29. 3 × 3 × 3 = ?", choices: ["27", "24", "21", "30"], answer: "27" },
-        { question: "30. 10 - 2 × 4 = ?", choices: ["2", "6", "8", "4"], answer: "2" },
-        { question: "31. 9 + 9 = ?", choices: ["18", "16", "14", "12"], answer: "18" },
-        { question: "32. 6 ÷ 2 = ?", choices: ["2", "3", "4", "5"], answer: "3" },
-        { question: "33. 5 + 5 × 2 = ?", choices: ["15", "10", "20", "12"], answer: "15" },
-        { question: "34. 100 ÷ 5 = ?", choices: ["15", "20", "25", "30"], answer: "20" },
-        { question: "35. 3/4 + 1/4 = ?", choices: ["1", "2/4", "3/4", "4/4"], answer: "1" },
-        { question: "36. 7 + 7 + 7 = ?", choices: ["21", "18", "14", "15"], answer: "21" },
-        { question: "37. 8 - 3 = ?", choices: ["5", "4", "3", "6"], answer: "5" },
-        { question: "38. 4 + 9 = ?", choices: ["12", "13", "11", "14"], answer: "13" },
-        { question: "39. 25 ÷ 5 = ?", choices: ["5", "6", "4", "3"], answer: "5" },
-        { question: "40. 16 ÷ 4 = ?", choices: ["2", "4", "3", "5"], answer: "4" },
-        { question: "41. 10 + 20 = ?", choices: ["30", "40", "50", "20"], answer: "30" },
-        { question: "42. 50 - 25 = ?", choices: ["25", "20", "30", "40"], answer: "25" },
-        { question: "43. 5 × 5 + 5 = ?", choices: ["30", "25", "35", "20"], answer: "30" },
-        { question: "44. 60 ÷ 10 = ?", choices: ["6", "7", "5", "4"], answer: "6" },
-        { question: "45. 14 + 6 = ?", choices: ["20", "19", "21", "18"], answer: "20" },
-        { question: "46. 8 × 8 = ?", choices: ["64", "60", "50", "70"], answer: "64" },
-        { question: "47. 2 + 3 × 3 = ?", choices: ["11", "10", "12", "9"], answer: "11" },
-        { question: "48. 25% of 200 = ?", choices: ["50", "75", "100", "25"], answer: "50" },
-        { question: "49. 6 × 7 = ?", choices: ["42", "40", "30", "32"], answer: "42" },
-        { question: "50. 100 - 50 + 25 = ?", choices: ["75", "80", "70", "90"], answer: "75" }
-    ];
+        { "question": "1. पाई (π) का मान क्या है?", "choices": ["3.14", "3.1415", "3.1416", "3.15"], "answer": "3.1416" },
+        { "question": "2. कोणमाप की इकाई क्या है?", "choices": ["सेकंड", "मिलीमीटर", "डिग्री", "सेंटीमीटर"], "answer": "डिग्री" },
+        { "question": "3. एक त्रिकोण के तीन कोणों का योग क्या होता है?", "choices": ["90°", "180°", "270°", "360°"], "answer": "180°" },
+        { "question": "4. समांतर रेखाएँ कब मिलती हैं?", "choices": ["जब वे समान ढाल की होती हैं", "जब वे समान होते हैं", "जब वे एक दूसरे को काटती हैं", "यह कभी नहीं होती"], "answer": "यह कभी नहीं होती" },
+        { "question": "5. एक आयत का क्षेत्रफल किस प्रकार निकाला जाता है?", "choices": ["लंबाई × चौड़ाई", "लंबाई + चौड़ाई", "चौड़ाई ÷ लंबाई", "लंबाई × ऊँचाई"], "answer": "लंबाई × चौड़ाई" },
+        { "question": "6. 'क्यूब' का आयतन का सूत्र क्या है?", "choices": ["a³", "a²", "a + b", "a × b × c"], "answer": "a³" },
+        { "question": "7. वर्गमूल का मतलब क्या है?", "choices": ["संख्या का गुणनफल", "संख्या का आधा", "संख्या का प्रतिवर्ती", "संख्या जिसका गुणनफल वही संख्या हो"], "answer": "संख्या जिसका गुणनफल वही संख्या हो" },
+        { "question": "8. एक रेखा को किस प्रकार से अभिव्यक्त किया जाता है?", "choices": ["रेखा समीकरण", "वर्ग समीकरण", "समीकरण", "चतुर्भुज"], "answer": "रेखा समीकरण" },
+        { "question": "9. त्रिकोणमिति का सबसे सामान्य अनुपात कौन सा है?", "choices": ["साइन", "कोसाइन", "टैन्जेंट", "सिंक"], "answer": "साइन" },
+        { "question": "10. एक वृत्त की परिधि का सूत्र क्या है?", "choices": ["2πr", "πr²", "πr", "2πr²"], "answer": "2πr" },
+        { "question": "11. वर्धमान त्रिकोण में कौन सा कोण होता है?", "choices": ["90°", "180°", "120°", "30°"], "answer": "90°" },
+        { "question": "12. समानांतर रेखाओं के बीच के अंतर को क्या कहते हैं?", "choices": ["दूरी", "कोण", "जोड़", "समान"], "answer": "दूरी" },
+        { "question": "13. एक गोलाकार पिंड का आयतन का सूत्र क्या है?", "choices": ["4/3πr³", "2πr²", "πr²", "πr³"], "answer": "4/3πr³" },
+        { "question": "14. दो रेखाओं को जब मिलते हैं, तो उन्हें क्या कहा जाता है?", "choices": ["समांतर", "आधार", "वृत्त", "इंटरसेक्टिंग"], "answer": "इंटरसेक्टिंग" },
+        { "question": "15. त्रिकोण के कोणों का योग क्या होता है?", "choices": ["180°", "360°", "90°", "270°"], "answer": "180°" },
+        { "question": "16. आयत का परिमाप किस प्रकार निकाला जाता है?", "choices": ["2लंबाई + 2चौड़ाई", "लंबाई × चौड़ाई", "लंबाई + चौड़ाई", "चौड़ाई ÷ लंबाई"], "answer": "2लंबाई + 2चौड़ाई" },
+        { "question": "17. एक बेलन का आयतन का सूत्र क्या है?", "choices": ["πr²h", "2πr²", "πr³", "4/3πr³"], "answer": "πr²h" },
+        { "question": "18. वर्ग का क्षेत्रफल क्या होता है?", "choices": ["लंबाई × चौड़ाई", "लंबाई²", "आधार × ऊँचाई", "लंबाई × ऊँचाई"], "answer": "लंबाई²" },
+        { "question": "19. 1000 का वर्गमूल क्या होता है?", "choices": ["31.62", "32.62", "33.62", "30.62"], "answer": "31.62" },
+        { "question": "20. त्रिकोण का आकार किससे मापा जाता है?", "choices": ["दूरी", "क्षेत्रफल", "परिमाप", "आधार"], "answer": "क्षेत्रफल" },
+        { "question": "21. अगर किसी त्रिकोण के तीनों कोण समान हों, तो वह त्रिकोण क्या कहलाता है?", "choices": ["समद्विबाहु", "समानांतर", "समकोण", "समानांक"], "answer": "समद्विबाहु" },
+        { "question": "22. 25 का वर्गमूल क्या होगा?", "choices": ["5", "10", "7", "12"], "answer": "5" },
+        { "question": "23. समकोण त्रिकोण में कौन सा अनुपात सबसे महत्वपूर्ण होता है?", "choices": ["साइन", "कोसाइन", "टैन्जेंट", "सिंक"], "answer": "साइन" },
+        { "question": "24. एक त्रिकोण का आधार 6 मीटर और ऊँचाई 8 मीटर हो, तो उसका क्षेत्रफल क्या होगा?", "choices": ["24 वर्ग मीटर", "48 वर्ग मीटर", "36 वर्ग मीटर", "16 वर्ग मीटर"], "answer": "24 वर्ग मीटर" },
+        { "question": "25. 9 का वर्गमूल क्या होता है?", "choices": ["3", "4", "5", "2"], "answer": "3" },
+        { "question": "26. सर्कल के केंद्र का बिंदु क्या कहलाता है?", "choices": ["रेडियस", "वृत्त", "बिज्ञप्ति", "केंद्र"], "answer": "केंद्र" },
+        { "question": "27. एक त्रिकोण के परिमाप को कैसे निकाला जाता है?", "choices": ["आधार + ऊँचाई", "आधार + ऊँचाई + दोनों कोण", "सभी तीन भुजाएँ जोड़कर", "सभी कोण जोड़कर"], "answer": "सभी तीन भुजाएँ जोड़कर" },
+        { "question": "28. दो समानांतर रेखाओं के बीच अंतर क्या कहलाता है?", "choices": ["दूरी", "समानता", "चौड़ाई", "परिमाप"], "answer": "दूरी" },
+        { "question": "29. किसी त्रिकोण का क्षेत्रफल निकालने के लिए क्या उपयोग होता है?", "choices": ["1/2 × आधार × ऊँचाई", "आधार × ऊँचाई", "1/3 × आधार × ऊँचाई", "आधार²"], "answer": "1/2 × आधार × ऊँचाई" },
+        { "question": "30. एक बेलन के व्यास का क्या अर्थ है?", "choices": ["व्यास और व्यास", "बिज्ञप्ति", "केंद्र से बाहर तक की दूरी", "एक लंबी रेखा"], "answer": "केंद्र से बाहर तक की दूरी" },
+        { "question": "31. त्रिकोणमिति के कौन से अनुपात होते हैं?", "choices": ["साइन, कोसाइन, टैन्जेंट", "साइन, कोसाइन", "कोसाइन, टैन्जेंट", "साइन, टैन्जेंट"], "answer": "साइन, कोसाइन, टैन्जेंट" },
+        { "question": "32. 256 का वर्गमूल क्या होता है?", "choices": ["16", "14", "15", "18"], "answer": "16" },
+        { "question": "33. एक कोण 90° से ज्यादा और 180° से कम हो, तो उसे क्या कहते हैं?", "choices": ["समकोण", "अधकोण", "वर्धमान कोण", "समान कोण"], "answer": "वर्धमान कोण" },
+        { "question": "34. 10 से 15 तक के संख्याओं का योग क्या होगा?", "choices": ["75", "70", "80", "85"], "answer": "75" },
+        { "question": "35. दो कोणों का योग 90° हो तो वे कोण क्या कहलाते हैं?", "choices": ["समकोण", "अधकोण", "पूरक", "समांतर"], "answer": "पूरक" },
+        { "question": "36. एक आयत का क्षेत्रफल किस प्रकार निकालते हैं?", "choices": ["लंबाई × चौड़ाई", "लंबाई ÷ चौड़ाई", "चौड़ाई × ऊँचाई", "चौड़ाई + ऊँचाई"], "answer": "लंबाई × चौड़ाई" },
+        { "question": "37. किसी भी संख्या का 100 गुना करने के लिए क्या करना होता है?", "choices": ["गुणा 100", "बढ़ाना 100", "विभाजन 100", "भाग 100"], "answer": "गुणा 100" },
+        { "question": "38. 10 का गुणा 25 से करने पर क्या होगा?", "choices": ["250", "300", "350", "400"], "answer": "250" },
+        { "question": "39. एक कोण 90° से अधिक और 180° से कम होता है, तो उसे क्या कहते हैं?", "choices": ["समकोण", "वर्धमान", "वृत्त", "अधकोण"], "answer": "वर्धमान" },
+        { "question": "40. 100 के समकक्ष कौन सी संख्या होती है?", "choices": ["100", "200", "300", "50"], "answer": "100" },
+        { "question": "41. किसी भी संख्या का दसवां हिस्सा निकालने के लिए क्या करना होता है?", "choices": ["गुणा 0.10", "विभाजन 10", "गुणा 10", "भाग 10"], "answer": "विभाजन 10" },
+        { "question": "42. किसी भी त्रिकोण के आधार और ऊँचाई से क्या निकाला जाता है?", "choices": ["क्षेत्रफल", "परिमाप", "बिज्ञप्ति", "आधार"], "answer": "क्षेत्रफल" },
+        { "question": "43. लंबाई के लिए सबसे छोटा माप कौन सा होता है?", "choices": ["मीटर", "सेंटीमीटर", "मिलीमीटर", "किलोमीटर"], "answer": "मिलीमीटर" },
+        { "question": "44. एक समांतर चतुर्भुज का क्षेत्रफल निकालने का सूत्र क्या होता है?", "choices": ["आधार × ऊँचाई", "लंबाई + चौड़ाई", "आधार + चौड़ाई", "आधार²"], "answer": "आधार × ऊँचाई" },
+        { "question": "45. एक त्रिकोण का कोण 60° है, तो दूसरे कोणों का योग क्या होगा?", "choices": ["120°", "180°", "90°", "60°"], "answer": "120°" },
+        { "question": "46. 3 का गुणा 15 से करने पर क्या होगा?", "choices": ["45", "30", "20", "50"], "answer": "45" },
+        { "question": "47. 500 का आधा क्या होता है?", "choices": ["250", "500", "300", "200"], "answer": "250" },
+        { "question": "48. 1000 का 10% क्या होगा?", "choices": ["100", "150", "200", "250"], "answer": "100" },
+        { "question": "49. त्रिकोण का एक कोण 90° है, तो दूसरा कोण क्या होगा?", "choices": ["45°", "60°", "30°", "90°"], "answer": "90°" },
+        { "question": "50. 15 का गुणा 2 से करने पर क्या होगा?", "choices": ["30", "25", "20", "50"], "answer": "30" }
+    ]
+    ;
     
 
     
